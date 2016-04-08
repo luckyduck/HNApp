@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0EC0E0F1CB398740045956E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E0E1CB398740045956E /* AppDelegate.swift */; };
+		D0EC0E141CB398740045956E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EC0E121CB398740045956E /* Main.storyboard */; };
+		D0EC0E171CB398740045956E /* HeadNapApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E151CB398740045956E /* HeadNapApp.xcdatamodeld */; };
+		D0EC0E191CB398740045956E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EC0E181CB398740045956E /* Assets.xcassets */; };
+		D0EC0E1C1CB398740045956E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EC0E1A1CB398740045956E /* LaunchScreen.storyboard */; };
+		D0EC0E271CB398740045956E /* HeadNapAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E261CB398740045956E /* HeadNapAppTests.swift */; };
+		D0EC0E321CB398740045956E /* HeadNapAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E311CB398740045956E /* HeadNapAppUITests.swift */; };
+		D0EC0E401CB3A00D0045956E /* siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EC0E3F1CB3A00D0045956E /* siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png */; };
+		D0EC0E461CB3BFAA0045956E /* FotogridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E451CB3BFAA0045956E /* FotogridController.swift */; };
+		D0EC0E481CB3C1380045956E /* FotogridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E471CB3C1380045956E /* FotogridCell.swift */; };
+		D0EC0E4A1CB3C32B0045956E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E491CB3C32B0045956E /* File.swift */; };
+		D0EC0E4C1CB3D75F0045956E /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E4B1CB3D75F0045956E /* VideoViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0EC0E231CB398740045956E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EC0E031CB398740045956E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0EC0E0A1CB398740045956E;
+			remoteInfo = HeadNapApp;
+		};
+		D0EC0E2E1CB398740045956E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EC0E031CB398740045956E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0EC0E0A1CB398740045956E;
+			remoteInfo = HeadNapApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D0DBC3B61CB7934E00DB2101 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D0DBC3B71CB7934E00DB2101 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		D0EC0E0B1CB398740045956E /* HeadNapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadNapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EC0E0E1CB398740045956E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0EC0E131CB398740045956E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0EC0E161CB398740045956E /* HeadNapApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeadNapApp.xcdatamodel; sourceTree = "<group>"; };
+		D0EC0E181CB398740045956E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0EC0E1B1CB398740045956E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0EC0E1D1CB398740045956E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0EC0E221CB398740045956E /* HeadNapAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadNapAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EC0E261CB398740045956E /* HeadNapAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadNapAppTests.swift; sourceTree = "<group>"; };
+		D0EC0E281CB398740045956E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0EC0E2D1CB398740045956E /* HeadNapAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadNapAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EC0E311CB398740045956E /* HeadNapAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadNapAppUITests.swift; sourceTree = "<group>"; };
+		D0EC0E331CB398740045956E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0EC0E3F1CB3A00D0045956E /* siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png"; sourceTree = "<group>"; };
+		D0EC0E451CB3BFAA0045956E /* FotogridController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotogridController.swift; sourceTree = "<group>"; };
+		D0EC0E471CB3C1380045956E /* FotogridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotogridCell.swift; sourceTree = "<group>"; };
+		D0EC0E491CB3C32B0045956E /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		D0EC0E4B1CB3D75F0045956E /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0EC0E081CB398740045956E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EC0E1F1CB398740045956E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EC0E2A1CB398740045956E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0EC0E021CB398740045956E = {
+			isa = PBXGroup;
+			children = (
+				D0EC0E0D1CB398740045956E /* HeadNapApp */,
+				D0EC0E251CB398740045956E /* HeadNapAppTests */,
+				D0EC0E301CB398740045956E /* HeadNapAppUITests */,
+				D0EC0E0C1CB398740045956E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0EC0E0C1CB398740045956E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0EC0E0B1CB398740045956E /* HeadNapApp.app */,
+				D0EC0E221CB398740045956E /* HeadNapAppTests.xctest */,
+				D0EC0E2D1CB398740045956E /* HeadNapAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0EC0E0D1CB398740045956E /* HeadNapApp */ = {
+			isa = PBXGroup;
+			children = (
+				D0EC0E441CB3BEBB0045956E /* Support Files */,
+				D0EC0E411CB3A0170045956E /* images */,
+				D0EC0E0E1CB398740045956E /* AppDelegate.swift */,
+				D0EC0E121CB398740045956E /* Main.storyboard */,
+				D0EC0E181CB398740045956E /* Assets.xcassets */,
+				D0EC0E451CB3BFAA0045956E /* FotogridController.swift */,
+				D0EC0E471CB3C1380045956E /* FotogridCell.swift */,
+				D0EC0E491CB3C32B0045956E /* File.swift */,
+				D0EC0E4B1CB3D75F0045956E /* VideoViewController.swift */,
+			);
+			path = HeadNapApp;
+			sourceTree = "<group>";
+		};
+		D0EC0E251CB398740045956E /* HeadNapAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0EC0E261CB398740045956E /* HeadNapAppTests.swift */,
+				D0EC0E281CB398740045956E /* Info.plist */,
+			);
+			path = HeadNapAppTests;
+			sourceTree = "<group>";
+		};
+		D0EC0E301CB398740045956E /* HeadNapAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0EC0E311CB398740045956E /* HeadNapAppUITests.swift */,
+				D0EC0E331CB398740045956E /* Info.plist */,
+			);
+			path = HeadNapAppUITests;
+			sourceTree = "<group>";
+		};
+		D0EC0E411CB3A0170045956E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D0EC0E3F1CB3A00D0045956E /* siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		D0EC0E441CB3BEBB0045956E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0EC0E1A1CB398740045956E /* LaunchScreen.storyboard */,
+				D0EC0E1D1CB398740045956E /* Info.plist */,
+				D0EC0E151CB398740045956E /* HeadNapApp.xcdatamodeld */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0EC0E0A1CB398740045956E /* HeadNapApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0EC0E361CB398740045956E /* Build configuration list for PBXNativeTarget "HeadNapApp" */;
+			buildPhases = (
+				D0EC0E071CB398740045956E /* Sources */,
+				D0EC0E081CB398740045956E /* Frameworks */,
+				D0EC0E091CB398740045956E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeadNapApp;
+			productName = HeadNapApp;
+			productReference = D0EC0E0B1CB398740045956E /* HeadNapApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0EC0E211CB398740045956E /* HeadNapAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0EC0E391CB398740045956E /* Build configuration list for PBXNativeTarget "HeadNapAppTests" */;
+			buildPhases = (
+				D0EC0E1E1CB398740045956E /* Sources */,
+				D0EC0E1F1CB398740045956E /* Frameworks */,
+				D0EC0E201CB398740045956E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0EC0E241CB398740045956E /* PBXTargetDependency */,
+			);
+			name = HeadNapAppTests;
+			productName = HeadNapAppTests;
+			productReference = D0EC0E221CB398740045956E /* HeadNapAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0EC0E2C1CB398740045956E /* HeadNapAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0EC0E3C1CB398740045956E /* Build configuration list for PBXNativeTarget "HeadNapAppUITests" */;
+			buildPhases = (
+				D0EC0E291CB398740045956E /* Sources */,
+				D0EC0E2A1CB398740045956E /* Frameworks */,
+				D0EC0E2B1CB398740045956E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0EC0E2F1CB398740045956E /* PBXTargetDependency */,
+			);
+			name = HeadNapAppUITests;
+			productName = HeadNapAppUITests;
+			productReference = D0EC0E2D1CB398740045956E /* HeadNapAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0EC0E031CB398740045956E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = HeadNap;
+				TargetAttributes = {
+					D0EC0E0A1CB398740045956E = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VQ28DV6T68;
+					};
+					D0EC0E211CB398740045956E = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VQ28DV6T68;
+						TestTargetID = D0EC0E0A1CB398740045956E;
+					};
+					D0EC0E2C1CB398740045956E = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VQ28DV6T68;
+						TestTargetID = D0EC0E0A1CB398740045956E;
+					};
+				};
+			};
+			buildConfigurationList = D0EC0E061CB398740045956E /* Build configuration list for PBXProject "HeadNapApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0EC0E021CB398740045956E;
+			productRefGroup = D0EC0E0C1CB398740045956E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0EC0E0A1CB398740045956E /* HeadNapApp */,
+				D0EC0E211CB398740045956E /* HeadNapAppTests */,
+				D0EC0E2C1CB398740045956E /* HeadNapAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0EC0E091CB398740045956E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EC0E401CB3A00D0045956E /* siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png in Resources */,
+				D0EC0E1C1CB398740045956E /* LaunchScreen.storyboard in Resources */,
+				D0EC0E191CB398740045956E /* Assets.xcassets in Resources */,
+				D0EC0E141CB398740045956E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EC0E201CB398740045956E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EC0E2B1CB398740045956E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0EC0E071CB398740045956E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EC0E4A1CB3C32B0045956E /* File.swift in Sources */,
+				D0EC0E461CB3BFAA0045956E /* FotogridController.swift in Sources */,
+				D0EC0E4C1CB3D75F0045956E /* VideoViewController.swift in Sources */,
+				D0EC0E0F1CB398740045956E /* AppDelegate.swift in Sources */,
+				D0EC0E171CB398740045956E /* HeadNapApp.xcdatamodeld in Sources */,
+				D0EC0E481CB3C1380045956E /* FotogridCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EC0E1E1CB398740045956E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EC0E271CB398740045956E /* HeadNapAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EC0E291CB398740045956E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EC0E321CB398740045956E /* HeadNapAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0EC0E241CB398740045956E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0EC0E0A1CB398740045956E /* HeadNapApp */;
+			targetProxy = D0EC0E231CB398740045956E /* PBXContainerItemProxy */;
+		};
+		D0EC0E2F1CB398740045956E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0EC0E0A1CB398740045956E /* HeadNapApp */;
+			targetProxy = D0EC0E2E1CB398740045956E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0EC0E121CB398740045956E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0EC0E131CB398740045956E /* Base */,
+				D0DBC3B71CB7934E00DB2101 /* de */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0EC0E1A1CB398740045956E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0EC0E1B1CB398740045956E /* Base */,
+				D0DBC3B61CB7934E00DB2101 /* de */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0EC0E341CB398740045956E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0EC0E351CB398740045956E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0EC0E371CB398740045956E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HeadNapApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.HeadNapApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D0EC0E381CB398740045956E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HeadNapApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.HeadNapApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D0EC0E3A1CB398740045956E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HeadNapAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.HeadNapAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeadNapApp.app/HeadNapApp";
+			};
+			name = Debug;
+		};
+		D0EC0E3B1CB398740045956E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HeadNapAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.HeadNapAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeadNapApp.app/HeadNapApp";
+			};
+			name = Release;
+		};
+		D0EC0E3D1CB398740045956E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HeadNapAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.HeadNapAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HeadNapApp;
+			};
+			name = Debug;
+		};
+		D0EC0E3E1CB398740045956E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HeadNapAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.HeadNapAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HeadNapApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0EC0E061CB398740045956E /* Build configuration list for PBXProject "HeadNapApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0EC0E341CB398740045956E /* Debug */,
+				D0EC0E351CB398740045956E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0EC0E361CB398740045956E /* Build configuration list for PBXNativeTarget "HeadNapApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0EC0E371CB398740045956E /* Debug */,
+				D0EC0E381CB398740045956E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0EC0E391CB398740045956E /* Build configuration list for PBXNativeTarget "HeadNapAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0EC0E3A1CB398740045956E /* Debug */,
+				D0EC0E3B1CB398740045956E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0EC0E3C1CB398740045956E /* Build configuration list for PBXNativeTarget "HeadNapAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0EC0E3D1CB398740045956E /* Debug */,
+				D0EC0E3E1CB398740045956E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0EC0E151CB398740045956E /* HeadNapApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0EC0E161CB398740045956E /* HeadNapApp.xcdatamodel */,
+			);
+			currentVersion = D0EC0E161CB398740045956E /* HeadNapApp.xcdatamodel */;
+			path = HeadNapApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D0EC0E031CB398740045956E /* Project object */;
+}

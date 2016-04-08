@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1g2-dc-qBY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Willkommen-->
+        <scene sceneID="CJT-JF-Sp3">
+            <objects>
+                <viewController title="Willkommen" id="DCg-OU-DiP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ztm-IP-Rhu"/>
+                        <viewControllerLayoutGuide type="bottom" id="y9f-I7-82J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y87-AR-NYM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEp-gD-ofD">
+                                <rect key="frame" x="0.0" y="64" width="320" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TEp-gD-ofD" secondAttribute="height" multiplier="64:35" id="WvI-Kz-C4Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="40" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="100" maxY="0.0"/>
+                                <state key="normal" title="Start" backgroundImage="siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hZ3-En-loS" kind="show" id="Ytm-Cd-tfL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.16470588235294117" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TEp-gD-ofD" firstAttribute="top" secondItem="ztm-IP-Rhu" secondAttribute="bottom" id="By6-wu-eby"/>
+                            <constraint firstAttribute="trailing" secondItem="TEp-gD-ofD" secondAttribute="trailing" id="Hvz-gp-2EM"/>
+                            <constraint firstItem="TEp-gD-ofD" firstAttribute="leading" secondItem="Y87-AR-NYM" secondAttribute="leading" id="Vx3-3p-saH"/>
+                            <constraint firstItem="TEp-gD-ofD" firstAttribute="top" secondItem="ztm-IP-Rhu" secondAttribute="bottom" constant="8" id="dk9-fj-k7H"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dk9-fj-k7H"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Willkommen bei HeadNap" id="0oM-KB-A4M"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YaI-Hq-0co" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="772"/>
+        </scene>
+        <!--Fotogrid Controller-->
+        <scene sceneID="XTF-KO-RJA">
+            <objects>
+                <collectionViewController id="hZ3-En-loS" customClass="FotogridController" customModule="HeadNapApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="s6b-q2-Rma">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uVt-SQ-JhU">
+                            <size key="itemSize" width="98" height="98"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fotoCell" id="10c-Xw-znS" customClass="FotogridCell" customModule="HeadNapApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5NS-tx-43d">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5NS-tx-43d" secondAttribute="bottom" id="KNg-fX-pYe"/>
+                                    <constraint firstAttribute="trailing" secondItem="5NS-tx-43d" secondAttribute="trailing" id="btz-66-mZq"/>
+                                    <constraint firstItem="5NS-tx-43d" firstAttribute="leading" secondItem="10c-Xw-znS" secondAttribute="leading" id="hjx-Jc-vo1"/>
+                                    <constraint firstItem="5NS-tx-43d" firstAttribute="top" secondItem="10c-Xw-znS" secondAttribute="top" id="uFk-hY-WXh"/>
+                                </constraints>
+                                <size key="customSize" width="100" height="100"/>
+                                <connections>
+                                    <outlet property="imageView" destination="5NS-tx-43d" id="Xwe-vL-h2e"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="hZ3-En-loS" id="jV2-5n-0sU"/>
+                            <outlet property="delegate" destination="hZ3-En-loS" id="2OC-7G-xmf"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="u0j-X9-BgR" kind="show" identifier="showDetail" id="Ojo-Jn-XAR"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hln-bm-zcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="772"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="NQZ-AE-jgl">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="u0j-X9-BgR" customClass="VideoViewController" customModule="HeadNapApp" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rI0-Pk-ARp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1443" y="772"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ave-CF-mKj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1g2-dc-qBY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hCE-BN-Vf7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DCg-OU-DiP" kind="relationship" relationship="rootViewController" id="Xra-01-mFj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1uC-Y4-0ng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="772"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png" width="960" height="540"/>
+    </resources>
+</document>

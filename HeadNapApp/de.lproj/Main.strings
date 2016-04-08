@@ -1,0 +1,9 @@
+
+/* Class = "UINavigationItem"; title = "Willkommen bei HeadNap"; ObjectID = "0oM-KB-A4M"; */
+"0oM-KB-A4M.title" = "Willkommen bei HeadNap";
+
+/* Class = "UIViewController"; title = "Willkommen"; ObjectID = "DCg-OU-DiP"; */
+"DCg-OU-DiP.title" = "Willkommen";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "TEp-gD-ofD"; */
+"TEp-gD-ofD.normalTitle" = "Start";
