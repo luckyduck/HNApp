@@ -12,5 +12,3 @@ struct MyPhoto {
     var kommentar: String
     var movieUrl: String
 }
-
-// mal testen
