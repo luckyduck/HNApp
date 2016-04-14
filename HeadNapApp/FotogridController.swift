@@ -41,18 +41,22 @@ import UIKit
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
-        if segue.identifier == "showDetail" {
         
+        if segue.identifier == "showDetail" {
+            
+           
             let destCtrl = segue.destinationViewController as! VideoViewController
             
             let indexPath = sender as! NSIndexPath
             
             let myPhoto = fotos[indexPath.row]
+            destCtrl.fotoToPlay = fotos[indexPath.row]
             
+/*
             let movieUrlNow = NSURL(string: myPhoto.movieUrl)
             
             destCtrl.videoURL = movieUrlNow
+*/
             
         }
     

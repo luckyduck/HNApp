@@ -16,8 +16,10 @@ class VideoViewController: UIViewController {
     var playerItem:AVPlayerItem?
     var videoURL: NSURL? = nil
     var moviePlayer: AVPlayer? = AVPlayer()
+    
+    var fotoToPlay: MyPhoto = MyPhoto(bildName: "",title: "",kommentar: "",movieUrl: "")
 
-    var movieNowReal = destCtrl.videoURL
+//    var movieNowReal = destCtrl.videoURL
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +36,18 @@ class VideoViewController: UIViewController {
 
     func loadVideo() {
         
-        let currentImg: MyPhoto?
+        
+        let currentImg = fotoToPlay.bildName // i assume this is the image info
+        print(fotoToPlay) // just to see what you have!
+        moviePlayer = AVPlayer(URL: NSURL(string: fotoToPlay.movieUrl)!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = moviePlayer
+        self.presentViewController(playerViewController, animated: true){
+            self.moviePlayer!.play()
+        }
+        
+/*
+ let currentImg: MyPhoto?
         
 //        let currentVideoURL = currentImg!.movieUrl
         
@@ -48,6 +61,7 @@ class VideoViewController: UIViewController {
         self.presentViewController(playerViewController, animated: true){
             // playerViewController.player!.play()
         }
+ */
     }
 
 }
