@@ -38,7 +38,7 @@ class VideoViewController: UIViewController {
         
         
         let currentImg = fotoToPlay.bildName // i assume this is the image info
-        print(fotoToPlay) // just to see what you have!
+//        print(fotoToPlay) // just to see what you have!
         moviePlayer = AVPlayer(URL: NSURL(string: fotoToPlay.movieUrl)!)
         let playerViewController = AVPlayerViewController()
         playerViewController.player = moviePlayer

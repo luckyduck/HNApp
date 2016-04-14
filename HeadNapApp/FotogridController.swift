@@ -80,12 +80,6 @@ import UIKit
         let currentImg = UIImage(named: fotos[indexPath.row].bildName)
         cell.imageView.image = currentImg
         
-        let currentLabel = fotos[indexPath.row].title
-        
-        print (currentLabel)
-        
-        // cell.imageLabel.text = currentLabel
-        
         return cell
     }
     

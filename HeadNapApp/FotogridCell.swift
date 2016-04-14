@@ -11,6 +11,5 @@ import UIKit
 class FotogridCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var imageLabel: UILabel!
     
 }
