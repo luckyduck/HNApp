@@ -12,3 +12,13 @@ struct MyPhoto {
     var kommentar: String
     var movieUrl: String
 }
+struct MyPaidVideos {
+    var bildName: String
+    var title: String
+    var kommentar: String
+    var movieUrl: String
+}
+struct MySectionTitleLabels {
+    var titleLabel: String
+    var backroundColor: String
+}
