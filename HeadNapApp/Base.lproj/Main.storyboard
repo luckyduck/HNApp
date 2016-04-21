@@ -70,7 +70,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fotoCell" id="10c-Xw-znS" customClass="FotogridCell" customModule="HeadNapApp" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" reuseIdentifier="fotoCell" id="10c-Xw-znS" customClass="FotogridCell" customModule="HeadNapApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="114" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -80,19 +80,23 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5NS-tx-43d">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hd-oH-DjZ">
-                                            <rect key="frame" x="8" y="4" width="84" height="84"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hd-oH-DjZ">
+                                            <rect key="frame" x="8" y="41" width="84" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="3hd-oH-DjZ" firstAttribute="trailing" secondItem="10c-Xw-znS" secondAttribute="trailingMargin" id="79D-fA-KjO"/>
+                                    <constraint firstItem="3hd-oH-DjZ" firstAttribute="leading" secondItem="10c-Xw-znS" secondAttribute="leadingMargin" id="Emi-4f-Mf6"/>
                                     <constraint firstAttribute="bottom" secondItem="5NS-tx-43d" secondAttribute="bottom" id="KNg-fX-pYe"/>
                                     <constraint firstAttribute="trailing" secondItem="5NS-tx-43d" secondAttribute="trailing" id="btz-66-mZq"/>
                                     <constraint firstItem="5NS-tx-43d" firstAttribute="leading" secondItem="10c-Xw-znS" secondAttribute="leading" id="hjx-Jc-vo1"/>
+                                    <constraint firstItem="3hd-oH-DjZ" firstAttribute="centerY" secondItem="5NS-tx-43d" secondAttribute="centerY" id="iL2-4g-RgT"/>
+                                    <constraint firstItem="3hd-oH-DjZ" firstAttribute="centerX" secondItem="10c-Xw-znS" secondAttribute="centerX" id="pVy-f4-jWf"/>
                                     <constraint firstItem="5NS-tx-43d" firstAttribute="top" secondItem="10c-Xw-znS" secondAttribute="top" id="uFk-hY-WXh"/>
                                 </constraints>
                                 <size key="customSize" width="100" height="100"/>
@@ -107,19 +111,27 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15R-S2-Dlz">
-                                    <rect key="frame" x="23" y="14" width="289" height="21"/>
+                                    <rect key="frame" x="23" y="14" width="174" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7X-tM-ddn">
+                                    <rect key="frame" x="200" y="10" width="100" height="30"/>
+                                    <state key="normal" title="Freischalten"/>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.93564850091934204" green="0.89521723985671997" blue="0.71810895204544067" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="15R-S2-Dlz" firstAttribute="trailing" secondItem="jxE-E9-zjf" secondAttribute="trailingMargin" id="GY7-SQ-BmG"/>
+                                <constraint firstItem="f7X-tM-ddn" firstAttribute="leading" secondItem="15R-S2-Dlz" secondAttribute="trailing" constant="3" id="8A4-Gx-s6N"/>
+                                <constraint firstItem="15R-S2-Dlz" firstAttribute="trailing" secondItem="jxE-E9-zjf" secondAttribute="trailingMargin" constant="-115" id="GY7-SQ-BmG"/>
+                                <constraint firstItem="f7X-tM-ddn" firstAttribute="trailing" secondItem="jxE-E9-zjf" secondAttribute="trailingMargin" constant="-12" id="Jx6-KV-ceN"/>
+                                <constraint firstItem="f7X-tM-ddn" firstAttribute="baseline" secondItem="15R-S2-Dlz" secondAttribute="baseline" id="Xzx-Dr-9n0"/>
                                 <constraint firstItem="15R-S2-Dlz" firstAttribute="leading" secondItem="jxE-E9-zjf" secondAttribute="leadingMargin" constant="15" id="aEm-8k-jQA"/>
                                 <constraint firstItem="15R-S2-Dlz" firstAttribute="centerY" secondItem="jxE-E9-zjf" secondAttribute="centerY" id="caa-hU-1UG"/>
                             </constraints>
                             <connections>
+                                <outlet property="buttonBuy" destination="f7X-tM-ddn" id="dPT-hh-ODS"/>
                                 <outlet property="sectionLabelSuperHead" destination="15R-S2-Dlz" id="IEd-vg-c9e"/>
                             </connections>
                         </collectionReusableView>

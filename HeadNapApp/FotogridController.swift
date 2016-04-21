@@ -24,7 +24,7 @@ import UIKit
         let sectionTitleLabel1 = MySectionTitleLabels(titleLabel: "HeadNap kostenlos kennenlernen", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel1)
         
-        let sectionTitleLabel2 = MySectionTitleLabels(titleLabel: "Erlebe Ruhe und Entspannung", backroundColor: "")
+        let sectionTitleLabel2 = MySectionTitleLabels(titleLabel: "Ruhe und Entspannung", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel2)
         
         // --- kostenlose Videos
@@ -181,6 +181,14 @@ import UIKit
         let sectionLabel: FotogridCell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: headerViewIdentifier, forIndexPath: indexPath) as! FotogridCell
         sectionLabel.sectionLabelSuperHead.text = sectionTitleLabels[indexPath.section].titleLabel
         print(sectionLabel.sectionLabelSuperHead.text)
+        
+        if ( indexPath.section == 0 ){
+            sectionLabel.buttonBuy.hidden = true
+        }
+        if ( indexPath.section == 1 ){
+            sectionLabel.buttonBuy.hidden = false
+        }
+        
         return sectionLabel
     
     }
@@ -208,8 +216,8 @@ import UIKit
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("fotoCell", forIndexPath: indexPath) as! FotogridCell
 
-        cell.backgroundColor = UIColor.grayColor()
-       
+//        cell.backgroundColor = UIColor.grayColor()
+
         let sectionNow = indexPath.section
         
         if (sectionNow == 0) {
@@ -231,7 +239,12 @@ import UIKit
     // MARK: FlowLayout Delegate
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexpath: NSIndexPath) -> CGSize {
         
-        let size = CGSize(width: 120, height: 88)
+        var size = CGSize(width: 140, height: 80)
+
+        if ( self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular ) {
+            size = CGSize(width: 280, height: 160)
+        }
+        
         return size
     
     }
