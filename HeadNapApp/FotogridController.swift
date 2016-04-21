@@ -21,10 +21,10 @@ import UIKit
         
         // --- sectionTitleLabels
  
-        let sectionTitleLabel1 = MySectionTitleLabels(titleLabel: "Basis Videos", backroundColor: "")
+        let sectionTitleLabel1 = MySectionTitleLabels(titleLabel: "HeadNap kostenlos kennenlernen", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel1)
         
-        let sectionTitleLabel2 = MySectionTitleLabels(titleLabel: "Videos HeadNap Five", backroundColor: "")
+        let sectionTitleLabel2 = MySectionTitleLabels(titleLabel: "Erlebe Ruhe und Entspannung", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel2)
         
         // --- kostenlose Videos
@@ -231,7 +231,7 @@ import UIKit
     // MARK: FlowLayout Delegate
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexpath: NSIndexPath) -> CGSize {
         
-        let size = CGSize(width: 88, height: 88)
+        let size = CGSize(width: 120, height: 88)
         return size
     
     }
