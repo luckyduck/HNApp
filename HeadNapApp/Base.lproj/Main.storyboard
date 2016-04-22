@@ -31,7 +31,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hZ3-En-loS" kind="show" id="Ytm-Cd-tfL"/>
+                                    <segue destination="hZ3-En-loS" kind="show" identifier="showGridOfVideos" id="Ytm-Cd-tfL"/>
                                 </connections>
                             </button>
                         </subviews>
