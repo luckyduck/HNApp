@@ -16,11 +16,11 @@
                         <viewControllerLayoutGuide type="bottom" id="y9f-I7-82J"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Y87-AR-NYM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEp-gD-ofD">
-                                <rect key="frame" x="0.0" y="64" width="320" height="175"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="328"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TEp-gD-ofD" secondAttribute="height" multiplier="64:35" id="WvI-Kz-C4Z"/>
                                 </constraints>
@@ -49,18 +49,17 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Willkommen bei HeadNap" id="0oM-KB-A4M"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaI-Hq-0co" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="620" y="772"/>
+            <point key="canvasLocation" x="333" y="772"/>
         </scene>
         <!--Fotogrid Controller-->
         <scene sceneID="XTF-KO-RJA">
             <objects>
                 <collectionViewController id="hZ3-En-loS" customClass="FotogridController" customModule="HeadNapApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="s6b-q2-Rma">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.61197096109390259" green="0.59341984987258911" blue="0.085392870008945465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uVt-SQ-JhU">
@@ -107,17 +106,20 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionLabelSuperHead" id="jxE-E9-zjf" customClass="FotogridCell" customModule="HeadNapApp">
-                            <rect key="frame" x="0.0" y="64" width="320" height="50"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15R-S2-Dlz">
-                                    <rect key="frame" x="23" y="14" width="174" height="21"/>
+                                    <rect key="frame" x="23" y="14" width="461" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7X-tM-ddn">
-                                    <rect key="frame" x="200" y="10" width="100" height="30"/>
+                                    <rect key="frame" x="492" y="10" width="100" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="HlI-Xa-0hE"/>
+                                    </constraints>
                                     <state key="normal" title="Freischalten"/>
                                 </button>
                             </subviews>
@@ -125,11 +127,20 @@
                             <constraints>
                                 <constraint firstItem="f7X-tM-ddn" firstAttribute="leading" secondItem="15R-S2-Dlz" secondAttribute="trailing" constant="3" id="8A4-Gx-s6N"/>
                                 <constraint firstItem="15R-S2-Dlz" firstAttribute="trailing" secondItem="jxE-E9-zjf" secondAttribute="trailingMargin" constant="-115" id="GY7-SQ-BmG"/>
-                                <constraint firstItem="f7X-tM-ddn" firstAttribute="trailing" secondItem="jxE-E9-zjf" secondAttribute="trailingMargin" constant="-12" id="Jx6-KV-ceN"/>
+                                <constraint firstItem="f7X-tM-ddn" firstAttribute="trailing" secondItem="jxE-E9-zjf" secondAttribute="trailingMargin" constant="-292" id="Jx6-KV-ceN"/>
+                                <constraint firstItem="f7X-tM-ddn" firstAttribute="trailing" secondItem="jxE-E9-zjf" secondAttribute="trailingMargin" id="WLS-kT-5rd"/>
                                 <constraint firstItem="f7X-tM-ddn" firstAttribute="baseline" secondItem="15R-S2-Dlz" secondAttribute="baseline" id="Xzx-Dr-9n0"/>
                                 <constraint firstItem="15R-S2-Dlz" firstAttribute="leading" secondItem="jxE-E9-zjf" secondAttribute="leadingMargin" constant="15" id="aEm-8k-jQA"/>
                                 <constraint firstItem="15R-S2-Dlz" firstAttribute="centerY" secondItem="jxE-E9-zjf" secondAttribute="centerY" id="caa-hU-1UG"/>
+                                <constraint firstItem="f7X-tM-ddn" firstAttribute="leading" secondItem="15R-S2-Dlz" secondAttribute="trailing" constant="8" symbolic="YES" id="pix-bk-50d"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="GY7-SQ-BmG"/>
+                                    <exclude reference="8A4-Gx-s6N"/>
+                                    <exclude reference="Jx6-KV-ceN"/>
+                                </mask>
+                            </variation>
                             <connections>
                                 <outlet property="buttonBuy" destination="f7X-tM-ddn" id="dPT-hh-ODS"/>
                                 <outlet property="sectionLabelSuperHead" destination="15R-S2-Dlz" id="IEd-vg-c9e"/>
@@ -140,7 +151,6 @@
                             <outlet property="delegate" destination="hZ3-En-loS" id="2OC-7G-xmf"/>
                         </connections>
                     </collectionView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="u0j-X9-BgR" kind="show" identifier="showDetail" id="Ojo-Jn-XAR"/>
                     </connections>
@@ -152,19 +162,16 @@
         <!--AV Player View Controller-->
         <scene sceneID="NQZ-AE-jgl">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="u0j-X9-BgR" customClass="VideoViewController" customModule="HeadNapApp" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </avPlayerViewController>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="u0j-X9-BgR" customClass="VideoViewController" customModule="HeadNapApp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rI0-Pk-ARp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1443" y="772"/>
+            <point key="canvasLocation" x="1742" y="772"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ave-CF-mKj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1g2-dc-qBY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hCE-BN-Vf7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -176,7 +183,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1uC-Y4-0ng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199" y="772"/>
+            <point key="canvasLocation" x="-325" y="772"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D02C4B641CCA359B00A8D2D5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02C4B631CCA359B00A8D2D5 /* StoreKit.framework */; };
 		D0EC0E0F1CB398740045956E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E0E1CB398740045956E /* AppDelegate.swift */; };
 		D0EC0E141CB398740045956E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EC0E121CB398740045956E /* Main.storyboard */; };
 		D0EC0E171CB398740045956E /* HeadNapApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E151CB398740045956E /* HeadNapApp.xcdatamodeld */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D02C4B631CCA359B00A8D2D5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D0DBC3B61CB7934E00DB2101 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D0DBC3B71CB7934E00DB2101 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		D0EC0E0B1CB398740045956E /* HeadNapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadNapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02C4B641CCA359B00A8D2D5 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +92,7 @@
 		D0EC0E021CB398740045956E = {
 			isa = PBXGroup;
 			children = (
+				D02C4B631CCA359B00A8D2D5 /* StoreKit.framework */,
 				D0EC0E0D1CB398740045956E /* HeadNapApp */,
 				D0EC0E251CB398740045956E /* HeadNapAppTests */,
 				D0EC0E301CB398740045956E /* HeadNapAppUITests */,
@@ -226,7 +230,12 @@
 				TargetAttributes = {
 					D0EC0E0A1CB398740045956E = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = M6P3UFG6Z9;
+						DevelopmentTeam = DGAZGKJN2Y;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					D0EC0E211CB398740045956E = {
 						CreatedOnToolsVersion = 7.3;
@@ -373,7 +382,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: HeadNap GmbH (DGAZGKJN2Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HeadNap GmbH (DGAZGKJN2Y)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -392,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -419,7 +429,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: HeadNap GmbH (DGAZGKJN2Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HeadNap GmbH (DGAZGKJN2Y)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -432,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,7 +459,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeadNapApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.HeadNapApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.headnap.headnapappvideos-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -462,7 +473,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeadNapApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.HeadNapApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.headnap.headnapappvideos-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
