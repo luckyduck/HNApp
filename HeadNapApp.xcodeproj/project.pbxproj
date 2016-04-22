@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D02C4B641CCA359B00A8D2D5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02C4B631CCA359B00A8D2D5 /* StoreKit.framework */; };
+		D079449E1CCA69200037DEC4 /* PurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079449D1CCA69200037DEC4 /* PurchaseController.swift */; };
 		D0EC0E0F1CB398740045956E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E0E1CB398740045956E /* AppDelegate.swift */; };
 		D0EC0E141CB398740045956E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EC0E121CB398740045956E /* Main.storyboard */; };
 		D0EC0E171CB398740045956E /* HeadNapApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E151CB398740045956E /* HeadNapApp.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		D02C4B631CCA359B00A8D2D5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D079449D1CCA69200037DEC4 /* PurchaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseController.swift; sourceTree = "<group>"; };
 		D0DBC3B61CB7934E00DB2101 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D0DBC3B71CB7934E00DB2101 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		D0EC0E0B1CB398740045956E /* HeadNapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadNapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				D0EC0E471CB3C1380045956E /* FotogridCell.swift */,
 				D0EC0E491CB3C32B0045956E /* File.swift */,
 				D0EC0E4B1CB3D75F0045956E /* VideoViewController.swift */,
+				D079449D1CCA69200037DEC4 /* PurchaseController.swift */,
 			);
 			path = HeadNapApp;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EC0E4A1CB3C32B0045956E /* File.swift in Sources */,
+				D079449E1CCA69200037DEC4 /* PurchaseController.swift in Sources */,
 				D0EC0E461CB3BFAA0045956E /* FotogridController.swift in Sources */,
 				D0EC0E4C1CB3D75F0045956E /* VideoViewController.swift in Sources */,
 				D0EC0E0F1CB398740045956E /* AppDelegate.swift in Sources */,

@@ -180,7 +180,6 @@ import UIKit
     
         let sectionLabel: FotogridCell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: headerViewIdentifier, forIndexPath: indexPath) as! FotogridCell
         sectionLabel.sectionLabelSuperHead.text = sectionTitleLabels[indexPath.section].titleLabel
-        print(sectionLabel.sectionLabelSuperHead.text)
         
         if ( indexPath.section == 0 ){
             sectionLabel.buttonBuy.hidden = true
