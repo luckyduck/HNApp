@@ -186,10 +186,15 @@ import UIKit
         }
         if ( indexPath.section == 1 ){
             sectionLabel.buttonBuy.hidden = false
+            sectionLabel.userInteractionEnabled = true
+            sectionLabel.contentView.userInteractionEnabled = true
+            sectionLabel.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(FotogridController.didTapButton)))
         }
-        
         return sectionLabel
-    
+    }
+
+    func didTapButton() {
+        self.performSegueWithIdentifier("showPurchase", sender: nil)
     }
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
