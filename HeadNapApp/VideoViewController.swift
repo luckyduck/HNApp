@@ -14,12 +14,14 @@ class VideoViewController: UIViewController {
 
     var fotos = [MyPhoto]()
     var fotosPaid = [MyPaidVideos]()
+    var headSnacks = [MyHeadSnacks]()
     var playerItem:AVPlayerItem?
     var videoURL: NSURL? = nil
     var moviePlayer: AVPlayer? = AVPlayer()
     
     var fotoToPlay: MyPhoto = MyPhoto(bildName: "",title: "",kommentar: "",movieUrl: "")
     var fotoToPlayPaid: MyPaidVideos = MyPaidVideos(bildName: "",title: "",kommentar: "",movieUrl: "")
+    var headSnacksToPlayPaid: MyHeadSnacks = MyHeadSnacks(bildName: "",title: "",kommentar: "",movieUrl: "")
     
     
 

@@ -14,11 +14,11 @@ import UIKit
     var fotos = [MyPhoto]()
     var paidVideos = [MyPaidVideos]()
     var sectionTitleLabels = [MySectionTitleLabels]()
+    var headSnacks = [MyHeadSnacks]()
    
     let headerViewIdentifier = "sectionLabelSuperHead"
     
     override func viewDidLoad() {
-        // sleep(5);
 
         super.viewDidLoad()
         
@@ -27,21 +27,41 @@ import UIKit
         let sectionTitleLabel1 = MySectionTitleLabels(titleLabel: "HeadNap kostenlos kennenlernen", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel1)
         
-        let sectionTitleLabel2 = MySectionTitleLabels(titleLabel: "Meditation lernen", backroundColor: "")
+        let sectionTitleLabel2 = MySectionTitleLabels(titleLabel: "HeadSnacks", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel2)
+        
+        let sectionTitleLabel3 = MySectionTitleLabels(titleLabel: "Themen und Vertiefungen", backroundColor: "")
+        sectionTitleLabels.append(sectionTitleLabel3)
+        
+        let sectionTitleLabel4 = MySectionTitleLabels(titleLabel: "Meditation lernen", backroundColor: "")
+        sectionTitleLabels.append(sectionTitleLabel4)
         
         // --- kostenlose Videos
         
         let bild1 = MyPhoto(bildName: "bgButtonCollection_1", title: "Herzlich willkommen", kommentar: "", movieUrl: "https://player.vimeo.com/external/145997190.hd.mp4?s=9f1f52432c542ce8058d8a61d81434fd36730b2d&profile_id=113" )
         fotos.append(bild1)
         
-        let bild2 = MyPhoto(bildName: "bgButtonCollection_2", title: "Warum HeadNap?", kommentar: "", movieUrl: "https://player.vimeo.com/external/139586847.hd.mp4?s=b478d42689a123ad0f2dd26100dfacfd025b8eef&profile_id=113")
+        let bild2 = MyPhoto(bildName: "bgButtonCollection_1", title: "Warum HeadNap?", kommentar: "", movieUrl: "https://player.vimeo.com/external/139586847.hd.mp4?s=b478d42689a123ad0f2dd26100dfacfd025b8eef&profile_id=113")
         fotos.append(bild2)
         
-        let bild3 = MyPhoto(bildName: "bgButtonCollection_2", title: "Über Siegfried Höchst", kommentar: "", movieUrl: "https://player.vimeo.com/external/142980452.hd.mp4?s=a0ade91fb7f673d9579a5226e0521b1c36e66e57&profile_id=113")
+        let bild3 = MyPhoto(bildName: "bgButtonCollection_1", title: "Über Siegfried Höchst", kommentar: "", movieUrl: "https://player.vimeo.com/external/142980452.hd.mp4?s=a0ade91fb7f673d9579a5226e0521b1c36e66e57&profile_id=113")
         fotos.append(bild3)
         
-   
+        // --- HeadSnacks
+        
+        let headSnack1 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Glück", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113")
+        headSnacks.append(headSnack1)
+
+        let headSnack2 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Frieden", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113")
+        headSnacks.append(headSnack2)
+        
+        let headSnack3 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Ruhe", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113")
+        headSnacks.append(headSnack3)
+        
+        let headSnack4 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Kraft", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113")
+        headSnacks.append(headSnack4)
+        
+        
         // --- paid videos
         
         let paidVideo1 = MyPaidVideos(bildName: "bgButtonCollection_3", title: "Übung 1", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113")
@@ -169,6 +189,9 @@ import UIKit
                 destCtrl.fotoToPlay = fotos[indexPath.row]
             }
             if (sectionNow == 1) {
+                destCtrl.headSnacksToPlayPaid = headSnacks[indexPath.row]
+            }
+            if (sectionNow == 3) {
                 destCtrl.fotoToPlayPaid = paidVideos[indexPath.row]
             }
             
@@ -190,6 +213,14 @@ import UIKit
             sectionLabel.buttonBuy.hidden = true
         }
         if ( indexPath.section == 1 ){
+            sectionLabel.buttonBuy.hidden = true
+            
+        }
+        if ( indexPath.section == 2 ){
+            sectionLabel.buttonBuy.hidden = true
+
+        }
+        if ( indexPath.section == 3 ){
             sectionLabel.buttonBuy.hidden = false
             sectionLabel.userInteractionEnabled = true
             sectionLabel.contentView.userInteractionEnabled = true
@@ -214,6 +245,9 @@ import UIKit
             countVids = fotos.count
         }
         if ( section == 1 ){
+            countVids = headSnacks.count
+        }
+        if ( section == 3 ){
             countVids = paidVideos.count
         }
         
@@ -225,8 +259,6 @@ import UIKit
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("fotoCell", forIndexPath: indexPath) as! FotogridCell
 
-//        cell.backgroundColor = UIColor.grayColor()
-
         let sectionNow = indexPath.section
         
         if (sectionNow == 0) {
@@ -236,6 +268,12 @@ import UIKit
             cell.imageLabel.text = currentTitle
         }
         if (sectionNow == 1) {
+            let currentImg = UIImage(named: headSnacks[indexPath.row].bildName)
+            cell.imageView.image = currentImg
+            let currentTitle = headSnacks[indexPath.row].title
+            cell.imageLabel.text = currentTitle
+        }
+        if (sectionNow == 3) {
             let currentImg = UIImage(named: paidVideos[indexPath.row].bildName)
             cell.imageView.image = currentImg
             let currentTitle = paidVideos[indexPath.row].title

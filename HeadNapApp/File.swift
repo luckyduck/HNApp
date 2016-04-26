@@ -18,6 +18,12 @@ struct MyPaidVideos {
     var kommentar: String
     var movieUrl: String
 }
+struct MyHeadSnacks {
+    var bildName: String
+    var title: String
+    var kommentar: String
+    var movieUrl: String
+}
 struct MySectionTitleLabels {
     var titleLabel: String
     var backroundColor: String
