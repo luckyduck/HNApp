@@ -22,37 +22,33 @@ class VideoViewController: UIViewController {
     var fotoToPlay: MyPhoto = MyPhoto(bildName: "",title: "",kommentar: "",movieUrl: "")
     var fotoToPlayPaid: MyPaidVideos = MyPaidVideos(bildName: "",title: "",kommentar: "",movieUrl: "")
     var headSnacksToPlayPaid: MyHeadSnacks = MyHeadSnacks(bildName: "",title: "",kommentar: "",movieUrl: "")
-    
-    
+    var headDeepsToPlayPaid: MyHeadDeep = MyHeadDeep(bildName: "",title: "",kommentar: "",movieUrl: "")
 
-//    var movieNowReal = destCtrl.videoURL
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadVideo()
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
     func loadVideo() {
         
-//        print(fotoToPlay.movieUrl)
-
         if (fotoToPlay.movieUrl != ""){
             moviePlayer = AVPlayer(URL: NSURL(string: fotoToPlay.movieUrl)!)
-
+        }
+        if (headSnacksToPlayPaid.movieUrl != ""){
+            moviePlayer = AVPlayer(URL: NSURL(string: headSnacksToPlayPaid.movieUrl)!)
+        }
+        if (headDeepsToPlayPaid.movieUrl != ""){
+            moviePlayer = AVPlayer(URL: NSURL(string: headDeepsToPlayPaid.movieUrl)!)
         }
         else {
             moviePlayer = AVPlayer(URL: NSURL(string: fotoToPlayPaid.movieUrl)!)
         }
-        
-//        moviePlayer = AVPlayer(URL: NSURL(string: fotoToPlay.movieUrl)!)
+
         let playerViewController = AVPlayerViewController()
         playerViewController.player = moviePlayer
         self.presentViewController(playerViewController, animated: true){

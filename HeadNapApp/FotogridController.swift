@@ -15,6 +15,7 @@ import UIKit
     var paidVideos = [MyPaidVideos]()
     var sectionTitleLabels = [MySectionTitleLabels]()
     var headSnacks = [MyHeadSnacks]()
+    var headDeeps = [MyHeadDeep]()
    
     let headerViewIdentifier = "sectionLabelSuperHead"
     
@@ -30,7 +31,7 @@ import UIKit
         let sectionTitleLabel2 = MySectionTitleLabels(titleLabel: "HeadSnacks", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel2)
         
-        let sectionTitleLabel3 = MySectionTitleLabels(titleLabel: "Themen und Vertiefungen", backroundColor: "")
+        let sectionTitleLabel3 = MySectionTitleLabels(titleLabel: "Vertiefungen & Werkzeuge", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel3)
         
         let sectionTitleLabel4 = MySectionTitleLabels(titleLabel: "Meditation lernen", backroundColor: "")
@@ -51,7 +52,7 @@ import UIKit
         
         let headSnack1 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Glück", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113")
         headSnacks.append(headSnack1)
-
+        
         let headSnack2 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Frieden", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113")
         headSnacks.append(headSnack2)
         
@@ -61,6 +62,16 @@ import UIKit
         let headSnack4 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Kraft", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113")
         headSnacks.append(headSnack4)
         
+        // --- HeadNap Deep
+        
+        let headDeep1 = MyHeadDeep(bildName: "bgButtonCollection_2", title: "Körpermeditation, Teil 1/3", kommentar: "", movieUrl: "https://player.vimeo.com/external/150766704.hd.mp4?s=e3753552bca502d16bbc0c0664abb5fcb7f66ad5&profile_id=113")
+        headDeeps.append(headDeep1)
+        
+        let headDeep2 = MyHeadDeep(bildName: "bgButtonCollection_2", title: "Körpermeditation, Teil 2/3", kommentar: "", movieUrl: "https://player.vimeo.com/external/152947489.sd.mp4?s=fa5e408c070d0ce09304822ee5ce2ca00a1e24ba&profile_id=165")
+        headDeeps.append(headDeep2)
+        
+        let headDeep3 = MyHeadDeep(bildName: "bgButtonCollection_2", title: "Körpermeditation, Teil 3/3", kommentar: "", movieUrl: "https://player.vimeo.com/external/152947490.sd.mp4?s=d0991b2f94c6812587610891f2848ffc291ca580&profile_id=165")
+        headDeeps.append(headDeep3)
         
         // --- paid videos
         
@@ -191,6 +202,9 @@ import UIKit
             if (sectionNow == 1) {
                 destCtrl.headSnacksToPlayPaid = headSnacks[indexPath.row]
             }
+            if (sectionNow == 2) {
+                destCtrl.headDeepsToPlayPaid = headDeeps[indexPath.row]
+            }
             if (sectionNow == 3) {
                 destCtrl.fotoToPlayPaid = paidVideos[indexPath.row]
             }
@@ -208,7 +222,7 @@ import UIKit
         sectionLabel.sectionLabelSuperHead.text = sectionTitleLabels[indexPath.section].titleLabel
         let bgColorNow = UIColor(red: 120.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 0.5)
         sectionLabel.backgroundColor = bgColorNow
-        
+/*
         if ( indexPath.section == 0 ){
             sectionLabel.buttonBuy.hidden = true
         }
@@ -226,6 +240,7 @@ import UIKit
             sectionLabel.contentView.userInteractionEnabled = true
             sectionLabel.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(FotogridController.didTapButton)))
         }
+ */
         return sectionLabel
     }
 
@@ -246,6 +261,9 @@ import UIKit
         }
         if ( section == 1 ){
             countVids = headSnacks.count
+        }
+        if ( section == 2 ){
+            countVids = headDeeps.count
         }
         if ( section == 3 ){
             countVids = paidVideos.count
@@ -271,6 +289,12 @@ import UIKit
             let currentImg = UIImage(named: headSnacks[indexPath.row].bildName)
             cell.imageView.image = currentImg
             let currentTitle = headSnacks[indexPath.row].title
+            cell.imageLabel.text = currentTitle
+        }
+        if (sectionNow == 2) {
+            let currentImg = UIImage(named: headDeeps[indexPath.row].bildName)
+            cell.imageView.image = currentImg
+            let currentTitle = headDeeps[indexPath.row].title
             cell.imageLabel.text = currentTitle
         }
         if (sectionNow == 3) {
@@ -306,10 +330,11 @@ import UIKit
 
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+       
+        print(indexPath.section)
         
         self.performSegueWithIdentifier("showDetail", sender: indexPath)
         
         return true
     }
-
 }

@@ -24,6 +24,12 @@ struct MyHeadSnacks {
     var kommentar: String
     var movieUrl: String
 }
+struct MyHeadDeep {
+    var bildName: String
+    var title: String
+    var kommentar: String
+    var movieUrl: String
+}
 struct MySectionTitleLabels {
     var titleLabel: String
     var backroundColor: String
