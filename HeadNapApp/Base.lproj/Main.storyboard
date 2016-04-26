@@ -174,7 +174,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Disko!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbj-sZ-hb8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disko!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbj-sZ-hb8">
                                 <rect key="frame" x="20" y="279" width="560" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -183,8 +183,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fbj-sZ-hb8" firstAttribute="centerX" secondItem="5oy-cB-aoO" secondAttribute="centerX" id="2gz-8R-OeL"/>
-                            <constraint firstItem="Fbj-sZ-hb8" firstAttribute="centerY" secondItem="5oy-cB-aoO" secondAttribute="centerY" id="vQU-kW-MzQ"/>
+                            <constraint firstItem="Fbj-sZ-hb8" firstAttribute="trailing" secondItem="5oy-cB-aoO" secondAttribute="trailingMargin" id="NVy-OS-HiK"/>
+                            <constraint firstItem="Fbj-sZ-hb8" firstAttribute="top" secondItem="SZp-sH-xLV" secondAttribute="bottom" constant="215" id="TcC-pS-wWA"/>
+                            <constraint firstItem="Fbj-sZ-hb8" firstAttribute="centerY" secondItem="5oy-cB-aoO" secondAttribute="centerY" id="Zhw-ka-Fbt"/>
+                            <constraint firstItem="Fbj-sZ-hb8" firstAttribute="leading" secondItem="5oy-cB-aoO" secondAttribute="leadingMargin" id="vCO-PD-8w6"/>
                         </constraints>
                     </view>
                 </viewController>
