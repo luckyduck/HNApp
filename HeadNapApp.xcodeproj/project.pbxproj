@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D026B7571CCF7B9000DCD187 /* headnap-logo-white-b250.png in Resources */ = {isa = PBXBuildFile; fileRef = D026B7561CCF7B9000DCD187 /* headnap-logo-white-b250.png */; };
 		D02C4B641CCA359B00A8D2D5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02C4B631CCA359B00A8D2D5 /* StoreKit.framework */; };
 		D079449E1CCA69200037DEC4 /* PurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079449D1CCA69200037DEC4 /* PurchaseController.swift */; };
 		D0EC0E0F1CB398740045956E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E0E1CB398740045956E /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D026B7561CCF7B9000DCD187 /* headnap-logo-white-b250.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headnap-logo-white-b250.png"; sourceTree = "<group>"; };
 		D02C4B631CCA359B00A8D2D5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D079449D1CCA69200037DEC4 /* PurchaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseController.swift; sourceTree = "<group>"; };
 		D0DBC3B61CB7934E00DB2101 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		D0EC0E411CB3A0170045956E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D026B7561CCF7B9000DCD187 /* headnap-logo-white-b250.png */,
 				D0EC0E3F1CB3A00D0045956E /* siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png */,
 			);
 			name = images;
@@ -280,6 +283,7 @@
 				D0EC0E401CB3A00D0045956E /* siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png in Resources */,
 				D0EC0E1C1CB398740045956E /* LaunchScreen.storyboard in Resources */,
 				D0EC0E191CB398740045956E /* Assets.xcassets in Resources */,
+				D026B7571CCF7B9000DCD187 /* headnap-logo-white-b250.png in Resources */,
 				D0EC0E141CB398740045956E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

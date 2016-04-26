@@ -10,6 +10,7 @@ import UIKit
 
  class FotogridController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    
     var fotos = [MyPhoto]()
     var paidVideos = [MyPaidVideos]()
     var sectionTitleLabels = [MySectionTitleLabels]()
@@ -17,6 +18,8 @@ import UIKit
     let headerViewIdentifier = "sectionLabelSuperHead"
     
     override func viewDidLoad() {
+        // sleep(5);
+
         super.viewDidLoad()
         
         // --- sectionTitleLabels
@@ -24,7 +27,7 @@ import UIKit
         let sectionTitleLabel1 = MySectionTitleLabels(titleLabel: "HeadNap kostenlos kennenlernen", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel1)
         
-        let sectionTitleLabel2 = MySectionTitleLabels(titleLabel: "Ruhe und Entspannung", backroundColor: "")
+        let sectionTitleLabel2 = MySectionTitleLabels(titleLabel: "Meditation lernen", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel2)
         
         // --- kostenlose Videos
@@ -180,6 +183,8 @@ import UIKit
     
         let sectionLabel: FotogridCell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: headerViewIdentifier, forIndexPath: indexPath) as! FotogridCell
         sectionLabel.sectionLabelSuperHead.text = sectionTitleLabels[indexPath.section].titleLabel
+        let bgColorNow = UIColor(red: 120.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 0.5)
+        sectionLabel.backgroundColor = bgColorNow
         
         if ( indexPath.section == 0 ){
             sectionLabel.buttonBuy.hidden = true
