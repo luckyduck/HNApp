@@ -332,8 +332,36 @@ import UIKit
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
        
         // print(indexPath.section)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("fotoCell", forIndexPath: indexPath) as! FotogridCell
         
-        self.performSegueWithIdentifier("showDetail", sender: indexPath)
+        let sectionNow = indexPath.section
+        
+        var videoIsPaid = false
+        
+        if (sectionNow == 0) {
+            let currentTitle = fotos[indexPath.row].title
+            cell.imageLabel.text = currentTitle
+            videoIsPaid = true
+        }
+        if (sectionNow == 1) {
+            let currentTitle = headSnacks[indexPath.row].title
+            cell.imageLabel.text = currentTitle
+        }
+        if (sectionNow == 2) {
+            let currentTitle = headDeeps[indexPath.row].title
+            cell.imageLabel.text = currentTitle
+        }
+        if (sectionNow == 3) {
+            let currentTitle = paidVideos[indexPath.row].title
+            cell.imageLabel.text = currentTitle
+        }
+        
+        if ( videoIsPaid ){
+            self.performSegueWithIdentifier("showDetail", sender: indexPath)
+        }
+        if ( videoIsPaid == false ){
+            self.performSegueWithIdentifier("showPurchaseController", sender: indexPath)
+        }
         
         return true
     }
