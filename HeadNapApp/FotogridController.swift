@@ -331,7 +331,7 @@ import UIKit
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
        
-        print(indexPath.section)
+        // print(indexPath.section)
         
         self.performSegueWithIdentifier("showDetail", sender: indexPath)
         

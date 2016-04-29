@@ -15,6 +15,7 @@ class VideoViewController: UIViewController {
     var fotos = [MyPhoto]()
     var fotosPaid = [MyPaidVideos]()
     var headSnacks = [MyHeadSnacks]()
+    var headNapDeep = [MyHeadDeep]()
     var playerItem:AVPlayerItem?
     var videoURL: NSURL? = nil
     var moviePlayer: AVPlayer? = AVPlayer()
@@ -45,10 +46,9 @@ class VideoViewController: UIViewController {
         if (headDeepsToPlayPaid.movieUrl != ""){
             moviePlayer = AVPlayer(URL: NSURL(string: headDeepsToPlayPaid.movieUrl)!)
         }
-        else {
+        if (fotoToPlayPaid.movieUrl != ""){
             moviePlayer = AVPlayer(URL: NSURL(string: fotoToPlayPaid.movieUrl)!)
         }
-
         let playerViewController = AVPlayerViewController()
         playerViewController.player = moviePlayer
         self.presentViewController(playerViewController, animated: true){
