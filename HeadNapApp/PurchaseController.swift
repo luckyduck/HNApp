@@ -10,8 +10,24 @@ import UIKit
 
 class PurchaseController: UIViewController {
 
+    var fotos = [MyPhoto]()
+    var fotosPaid = [MyPaidVideos]()
+    var headSnacks = [MyHeadSnacks]()
+    var headNapDeep = [MyHeadDeep]()
+    
+    var fotoToPlay: MyPhoto = MyPhoto(bildName: "",title: "",kommentar: "",movieUrl: "")
+    var fotoToPlayPaid: MyPaidVideos = MyPaidVideos(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
+    var headSnacksToPlayPaid: MyHeadSnacks = MyHeadSnacks(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
+    var headDeepsToPlayPaid: MyHeadDeep = MyHeadDeep(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
+    
+    @IBOutlet weak var labelVideoPaket: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        labelVideoPaket.text = "Der title des Videos"
 
         // Do any additional setup after loading the view.
     }
@@ -21,15 +37,5 @@ class PurchaseController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

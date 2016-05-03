@@ -17,18 +17,21 @@ struct MyPaidVideos {
     var title: String
     var kommentar: String
     var movieUrl: String
+    var produktID: String
 }
 struct MyHeadSnacks {
     var bildName: String
     var title: String
     var kommentar: String
     var movieUrl: String
+    var produktID: String
 }
 struct MyHeadDeep {
     var bildName: String
     var title: String
     var kommentar: String
     var movieUrl: String
+    var produktID: String
 }
 struct MySectionTitleLabels {
     var titleLabel: String
