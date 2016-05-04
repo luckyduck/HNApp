@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
- class FotogridController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class FotogridController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     
     var fotos = [MyPhoto]()
@@ -22,6 +23,10 @@ import UIKit
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        
         
         // --- sectionTitleLabels
  
@@ -37,30 +42,102 @@ import UIKit
         let sectionTitleLabel4 = MySectionTitleLabels(titleLabel: "Meditation lernen", backroundColor: "")
         sectionTitleLabels.append(sectionTitleLabel4)
         
+        
+        var counter = 0
+        for sectionTitleLabel in sectionTitleLabels {
+        
+            let newSection = NSEntityDescription.insertNewObjectForEntityForName("Section", inManagedObjectContext: context)
+            let sectionTitleNow = sectionTitleLabel.titleLabel
+
+            newSection.setValue(sectionTitleNow, forKey: "title")
+            newSection.setValue(counter, forKey: "position")
+            newSection.setValue(counter, forKey: "sectionID")
+            counter += 1
+        
+            do {
+                try context.save()
+            } catch {
+                print("Error saving")
+            }
+
+        }
+        
         // --- kostenlose Videos
         
-        let bild1 = MyPhoto(bildName: "bgButtonCollection_1", title: "Herzlich willkommen", kommentar: "", movieUrl: "https://player.vimeo.com/external/145997190.hd.mp4?s=9f1f52432c542ce8058d8a61d81434fd36730b2d&profile_id=113" )
+        let bild1 = MyPhoto(bildName: "bgButtonCollection_1", title: "Herzlich willkommen", kommentar: "", movieUrl: "https://player.vimeo.com/external/145997190.hd.mp4?s=9f1f52432c542ce8058d8a61d81434fd36730b2d&profile_id=113", produktID: "willkommen")
         fotos.append(bild1)
         
-        let bild2 = MyPhoto(bildName: "bgButtonCollection_1", title: "Warum HeadNap?", kommentar: "", movieUrl: "https://player.vimeo.com/external/139586847.hd.mp4?s=b478d42689a123ad0f2dd26100dfacfd025b8eef&profile_id=113")
+        let bild2 = MyPhoto(bildName: "bgButtonCollection_1", title: "Warum HeadNap?", kommentar: "", movieUrl: "https://player.vimeo.com/external/139586847.hd.mp4?s=b478d42689a123ad0f2dd26100dfacfd025b8eef&profile_id=113", produktID: "warumHeadNap")
         fotos.append(bild2)
         
-        let bild3 = MyPhoto(bildName: "bgButtonCollection_1", title: "Über Siegfried Höchst", kommentar: "", movieUrl: "https://player.vimeo.com/external/142980452.hd.mp4?s=a0ade91fb7f673d9579a5226e0521b1c36e66e57&profile_id=113")
+        let bild3 = MyPhoto(bildName: "bgButtonCollection_1", title: "Über Siegfried Höchst", kommentar: "", movieUrl: "https://player.vimeo.com/external/142980452.hd.mp4?s=a0ade91fb7f673d9579a5226e0521b1c36e66e57&profile_id=113", produktID: "ueberSiegfriedHoechst")
         fotos.append(bild3)
+        
+        for videoDetails in fotos {
+            
+            let newPaket = NSEntityDescription.insertNewObjectForEntityForName("Paket", inManagedObjectContext: context)
+            
+            let newVideo = NSEntityDescription.insertNewObjectForEntityForName("Video", inManagedObjectContext: context)
+            
+            newPaket.setValue(videoDetails.title, forKey: "name")
+            newPaket.setValue(videoDetails.produktID, forKey: "paketID")
+            newPaket.setValue(0, forKey: "sectionID")
+            newPaket.setValue(0.0, forKey: "price")
+            newPaket.setValue(videoDetails.produktID, forKey: "storeSKU")
+            
+            newVideo.setValue(videoDetails.title, forKey: "name")
+            newVideo.setValue(videoDetails.produktID, forKey: "paketID")
+            newVideo.setValue(videoDetails.bildName, forKey: "thumbnail")
+            newVideo.setValue(videoDetails.movieUrl, forKey: "videoUrl")
+            
+            do {
+                try context.save()
+            } catch {
+                print("Error saving")
+            }
+            
+        }
+        
         
         // --- HeadSnacks
         
-        let headSnack1 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Glück", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113", produktID: "headnapheadsnack")
+        let headSnack1 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Glück", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113", produktID: "headsnackglueck")
         headSnacks.append(headSnack1)
         
-        let headSnack2 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Frieden", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113", produktID: "")
+        let headSnack2 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Frieden", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113", produktID: "headsnackfrieden")
         headSnacks.append(headSnack2)
         
         let headSnack3 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Ruhe", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113", produktID: "headsnackruhe")
         headSnacks.append(headSnack3)
         
-        let headSnack4 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Kraft", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113", produktID: "")
+        let headSnack4 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Kraft", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113", produktID: "headsnackkraft")
         headSnacks.append(headSnack4)
+        
+        for videoDetails in headSnacks {
+            
+            let newPaket = NSEntityDescription.insertNewObjectForEntityForName("Paket", inManagedObjectContext: context)
+            
+            let newVideo = NSEntityDescription.insertNewObjectForEntityForName("Video", inManagedObjectContext: context)
+            
+            newPaket.setValue(videoDetails.title, forKey: "name")
+            newPaket.setValue(videoDetails.produktID, forKey: "paketID")
+            newPaket.setValue(1, forKey: "sectionID")
+            newPaket.setValue(0.0, forKey: "price")
+            newPaket.setValue(videoDetails.produktID, forKey: "storeSKU")
+            
+            newVideo.setValue(videoDetails.title, forKey: "name")
+            newVideo.setValue(videoDetails.produktID, forKey: "paketID")
+            newVideo.setValue(videoDetails.bildName, forKey: "thumbnail")
+            newVideo.setValue(videoDetails.movieUrl, forKey: "videoUrl")
+            
+            do {
+                try context.save()
+            } catch {
+                print("Error saving")
+            }
+            
+        }
+        
         
         // --- HeadNap Deep
         
@@ -72,6 +149,37 @@ import UIKit
         
         let headDeep3 = MyHeadDeep(bildName: "bgButtonCollection_2", title: "Körpermeditation, Teil 3/3", kommentar: "", movieUrl: "https://player.vimeo.com/external/152947490.sd.mp4?s=d0991b2f94c6812587610891f2848ffc291ca580&profile_id=165", produktID: "headnapkleinseriekoerpermeditation")
         headDeeps.append(headDeep3)
+        
+        
+        var lastPaketId = ""
+        for videoDetails in headDeeps {
+            
+            let newVideo = NSEntityDescription.insertNewObjectForEntityForName("Video", inManagedObjectContext: context)
+            
+            newVideo.setValue(videoDetails.title, forKey: "name")
+            newVideo.setValue(videoDetails.produktID, forKey: "paketID")
+            newVideo.setValue(videoDetails.bildName, forKey: "thumbnail")
+            newVideo.setValue(videoDetails.movieUrl, forKey: "videoUrl")
+          
+            if ( lastPaketId != videoDetails.produktID ) {
+                let newPaket = NSEntityDescription.insertNewObjectForEntityForName("Paket", inManagedObjectContext: context)
+                newPaket.setValue(videoDetails.title, forKey: "name")
+                newPaket.setValue(videoDetails.produktID, forKey: "paketID")
+                newPaket.setValue(2, forKey: "sectionID")
+                newPaket.setValue(0.0, forKey: "price")
+                newPaket.setValue(videoDetails.produktID, forKey: "storeSKU")
+            }
+
+            lastPaketId = videoDetails.produktID
+            
+            do {
+                try context.save()
+            } catch {
+                print("Error saving")
+            }
+            
+        }
+        
         
         // --- paid videos
         
@@ -179,9 +287,66 @@ import UIKit
         
         let paidVideo35 = MyPaidVideos(bildName: "bgButtonCollection_3", title: "Übung 35", kommentar: "", movieUrl: "https://player.vimeo.com/external/111534354.hd.mp4?s=30051f1b5c223ea32b81d205703f0d7377b1d3c2&profile_id=113", produktID: "headnapfive")
         paidVideos.append(paidVideo35)
-
+        
+        
+        lastPaketId = ""
+        for videoDetails in paidVideos {
+            
+            let newVideo = NSEntityDescription.insertNewObjectForEntityForName("Video", inManagedObjectContext: context)
+            
+            newVideo.setValue(videoDetails.title, forKey: "name")
+            newVideo.setValue(videoDetails.produktID, forKey: "paketID")
+            newVideo.setValue(videoDetails.bildName, forKey: "thumbnail")
+            newVideo.setValue(videoDetails.movieUrl, forKey: "videoUrl")
+            
+            if ( lastPaketId != videoDetails.produktID ) {
+                let newPaket = NSEntityDescription.insertNewObjectForEntityForName("Paket", inManagedObjectContext: context)
+                newPaket.setValue(videoDetails.title, forKey: "name")
+                newPaket.setValue(videoDetails.produktID, forKey: "paketID")
+                newPaket.setValue(3, forKey: "sectionID")
+                newPaket.setValue(0.0, forKey: "price")
+                newPaket.setValue(videoDetails.produktID, forKey: "storeSKU")
+            }
+            lastPaketId = videoDetails.produktID
+            
+            do {
+                try context.save()
+            } catch {
+                print("Error saving")
+            }
+            
+        }
+        
+/*
+        var request = NSFetchRequest(entityName: "Paket")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let results = try context.executeFetchRequest(request)
+            if results.count > 0 {
+                
+                for result in results as! [NSManagedObject] {
+                    
+                    print ("Paketname:")
+                    print(result.valueForKey("name")!)
+                    print ("Paket ID:")
+                    print(result.valueForKey("paketID")!)
+                    print ("Section ID:")
+                    print(result.valueForKey("sectionID")!)
+                    print ("Price:")
+                    print(result.valueForKey("price")!)
+                    print ("SKU:")
+                    print(result.valueForKey("storeSKU")!)
+                    print("------------------------------------------------")
+                    
+                }
+                
+            }
+        } catch {
+            print("Error fetching")
+        }
+*/
     }
- 
 
     // MARK: - Navigation
 
@@ -219,7 +384,30 @@ import UIKit
      override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
     
         let sectionLabel: FotogridCell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: headerViewIdentifier, forIndexPath: indexPath) as! FotogridCell
-        sectionLabel.sectionLabelSuperHead.text = sectionTitleLabels[indexPath.section].titleLabel
+        
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        let request = NSFetchRequest(entityName: "Section")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let results = try context.executeFetchRequest(request)
+            if results.count > 0 {
+                
+                for result in results as! [NSManagedObject] {
+                    
+                    if result.valueForKey("sectionID")! as? NSObject == indexPath.section {
+                    
+                        sectionLabel.sectionLabelSuperHead.text = result.valueForKey("title")! as? String
+                    
+                    }
+                }
+                
+            }
+        } catch {
+            print("Error fetching")
+        }
+        
         let bgColorNow = UIColor(red: 120.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 0.5)
         sectionLabel.backgroundColor = bgColorNow
 /*
@@ -249,26 +437,60 @@ import UIKit
     }
 */
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return sectionTitleLabels.count
+        
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        let request = NSFetchRequest(entityName: "Section")
+        request.returnsObjectsAsFaults = false
+        
+        var numberOfSectionsReturn = 0
+        
+        do {
+            let results = try context.executeFetchRequest(request)
+            if results.count > 0 {
+                numberOfSectionsReturn = results.count
+            }
+        }
+        catch {
+            print("Error fetching")
+        }
+        
+        return numberOfSectionsReturn
+
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        let requestPaket = NSFetchRequest(entityName: "Paket")
+        let requestVideo = NSFetchRequest(entityName: "Video")
+        requestPaket.returnsObjectsAsFaults = false
+        requestVideo.returnsObjectsAsFaults = false
+        
+        var paketIdToUseNow = ""
         var countVids = 0
         
-        if ( section == 0 ){
-            countVids = fotos.count
-        }
-        if ( section == 1 ){
-            countVids = headSnacks.count
-        }
-        if ( section == 2 ){
-            countVids = headDeeps.count
-        }
-        if ( section == 3 ){
-            countVids = paidVideos.count
-        }
-        
+            do {
+                let results = try context.executeFetchRequest(requestPaket)
+                for result in results as! [NSManagedObject] {
+                    if ( result.valueForKey("sectionID")! as? NSObject == section ) {
+                        
+                        paketIdToUseNow = result.valueForKey("paketID")! as! String
+
+                        let videos = try context.executeFetchRequest(requestVideo)
+                        for video in videos as! [NSManagedObject] {
+                            if ( video.valueForKey("paketID") as? NSObject == paketIdToUseNow ){
+                                countVids += 1
+                            }
+                        }
+                    }
+                }
+            }
+            catch {
+                print("Error fetching")
+            }
+
         return countVids
 
     }

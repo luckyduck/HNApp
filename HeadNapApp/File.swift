@@ -11,6 +11,7 @@ struct MyPhoto {
     var title: String
     var kommentar: String
     var movieUrl: String
+    var produktID: String
 }
 struct MyPaidVideos {
     var bildName: String
