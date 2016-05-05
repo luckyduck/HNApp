@@ -9,22 +9,15 @@
 import UIKit
 import AVKit
 import AVFoundation
+import CoreData
+
 
 class VideoViewController: UIViewController {
 
-    var fotos = [MyPhoto]()
-    var fotosPaid = [MyPaidVideos]()
-    var headSnacks = [MyHeadSnacks]()
-    var headNapDeep = [MyHeadDeep]()
     var playerItem:AVPlayerItem?
     var videoURL: NSURL? = nil
     var moviePlayer: AVPlayer? = AVPlayer()
     
-    var fotoToPlay: MyPhoto = MyPhoto(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
-    var fotoToPlayPaid: MyPaidVideos = MyPaidVideos(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
-    var headSnacksToPlayPaid: MyHeadSnacks = MyHeadSnacks(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
-    var headDeepsToPlayPaid: MyHeadDeep = MyHeadDeep(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
-
     override func viewDidLoad() {
         super.viewDidLoad()
         loadVideo()
@@ -33,28 +26,13 @@ class VideoViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
     func loadVideo() {
-        
-        if (fotoToPlay.movieUrl != ""){
-            moviePlayer = AVPlayer(URL: NSURL(string: fotoToPlay.movieUrl)!)
-        }
-        if (headSnacksToPlayPaid.movieUrl != ""){
-            moviePlayer = AVPlayer(URL: NSURL(string: headSnacksToPlayPaid.movieUrl)!)
-        }
-        if (headDeepsToPlayPaid.movieUrl != ""){
-            moviePlayer = AVPlayer(URL: NSURL(string: headDeepsToPlayPaid.movieUrl)!)
-        }
-        if (fotoToPlayPaid.movieUrl != ""){
-            moviePlayer = AVPlayer(URL: NSURL(string: fotoToPlayPaid.movieUrl)!)
-        }
+        moviePlayer = AVPlayer(URL: videoURL!)
         let playerViewController = AVPlayerViewController()
         playerViewController.player = moviePlayer
-        self.presentViewController(playerViewController, animated: true){
+        self.presentViewController(playerViewController, animated: false){
             self.moviePlayer!.play()
         }
-
     }
-
 }

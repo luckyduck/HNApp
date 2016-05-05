@@ -7,18 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class PurchaseController: UIViewController {
-
-    var fotos = [MyPhoto]()
-    var fotosPaid = [MyPaidVideos]()
-    var headSnacks = [MyHeadSnacks]()
-    var headNapDeep = [MyHeadDeep]()
     
-    var fotoToPlay: MyPhoto = MyPhoto(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
-    var fotoToPlayPaid: MyPaidVideos = MyPaidVideos(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
-    var headSnacksToPlayPaid: MyHeadSnacks = MyHeadSnacks(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
-    var headDeepsToPlayPaid: MyHeadDeep = MyHeadDeep(bildName: "",title: "",kommentar: "",movieUrl: "",produktID: "")
+    var paketName: String?
     
     @IBOutlet weak var labelVideoPaket: UILabel!
     
@@ -26,8 +19,7 @@ class PurchaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        labelVideoPaket.text = "Der title des Videos"
+        labelVideoPaket.text = "Paket: \(paketName!)"
 
         // Do any additional setup after loading the view.
     }

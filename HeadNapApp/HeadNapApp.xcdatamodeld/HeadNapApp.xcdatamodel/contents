@@ -19,12 +19,13 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="paketID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="thumbnail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="videoUrl" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="paket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Paket" inverseName="videos" inverseEntity="Paket" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Video" positionX="117" positionY="-163" width="128" height="118"/>
         <element name="Paket" positionX="-65" positionY="-225" width="128" height="148"/>
         <element name="Section" positionX="-245" positionY="-141" width="128" height="103"/>
+        <element name="Video" positionX="117" positionY="-163" width="128" height="133"/>
     </elements>
 </model>

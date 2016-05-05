@@ -27,7 +27,16 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDel.managedObjectContext
         
-        
+        // -----------------------------------------------------------------------------------------------------------------
+        // ------------------- datensatz initialisieren - begin ------------------------------------------------------------
+        let requestSectionTest = NSFetchRequest(entityName: "Section")
+        requestSectionTest.returnsObjectsAsFaults = false
+        do {
+            let resultsSectionTest = try context.executeFetchRequest(requestSectionTest)
+            if resultsSectionTest.count == 0 {
+        // ------------------- datensatz initialisieren - begin ------------------------------------------------------------
+        // -----------------------------------------------------------------------------------------------------------------
+
         // --- sectionTitleLabels
  
         let sectionTitleLabel1 = MySectionTitleLabels(titleLabel: "HeadNap kostenlos kennenlernen", backroundColor: "")
@@ -72,7 +81,8 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
         
         let bild3 = MyPhoto(bildName: "bgButtonCollection_1", title: "Über Siegfried Höchst", kommentar: "", movieUrl: "https://player.vimeo.com/external/142980452.hd.mp4?s=a0ade91fb7f673d9579a5226e0521b1c36e66e57&profile_id=113", produktID: "ueberSiegfriedHoechst")
         fotos.append(bild3)
-        
+                
+        counter = 0
         for videoDetails in fotos {
             
             let newPaket = NSEntityDescription.insertNewObjectForEntityForName("Paket", inManagedObjectContext: context)
@@ -89,6 +99,8 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
             newVideo.setValue(videoDetails.produktID, forKey: "paketID")
             newVideo.setValue(videoDetails.bildName, forKey: "thumbnail")
             newVideo.setValue(videoDetails.movieUrl, forKey: "videoUrl")
+            newVideo.setValue(counter, forKey: "videoID")
+            counter += 1
             
             do {
                 try context.save()
@@ -112,7 +124,8 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
         
         let headSnack4 = MyHeadSnacks(bildName: "bgButtonCollection_2", title: "Kraft", kommentar: "", movieUrl: "https://player.vimeo.com/external/143851174.hd.mp4?s=0381bc5f10a45f778222713836e86cfff46f8f26&profile_id=113", produktID: "headsnackkraft")
         headSnacks.append(headSnack4)
-        
+                
+        counter = 0
         for videoDetails in headSnacks {
             
             let newPaket = NSEntityDescription.insertNewObjectForEntityForName("Paket", inManagedObjectContext: context)
@@ -129,6 +142,8 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
             newVideo.setValue(videoDetails.produktID, forKey: "paketID")
             newVideo.setValue(videoDetails.bildName, forKey: "thumbnail")
             newVideo.setValue(videoDetails.movieUrl, forKey: "videoUrl")
+            newVideo.setValue(counter, forKey: "videoID")
+            counter += 1
             
             do {
                 try context.save()
@@ -152,6 +167,7 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
         
         
         var lastPaketId = ""
+        counter = 0
         for videoDetails in headDeeps {
             
             let newVideo = NSEntityDescription.insertNewObjectForEntityForName("Video", inManagedObjectContext: context)
@@ -160,6 +176,8 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
             newVideo.setValue(videoDetails.produktID, forKey: "paketID")
             newVideo.setValue(videoDetails.bildName, forKey: "thumbnail")
             newVideo.setValue(videoDetails.movieUrl, forKey: "videoUrl")
+            newVideo.setValue(counter, forKey: "videoID")
+            counter += 1
           
             if ( lastPaketId != videoDetails.produktID ) {
                 let newPaket = NSEntityDescription.insertNewObjectForEntityForName("Paket", inManagedObjectContext: context)
@@ -290,6 +308,7 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
         
         
         lastPaketId = ""
+        counter = 0
         for videoDetails in paidVideos {
             
             let newVideo = NSEntityDescription.insertNewObjectForEntityForName("Video", inManagedObjectContext: context)
@@ -298,6 +317,8 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
             newVideo.setValue(videoDetails.produktID, forKey: "paketID")
             newVideo.setValue(videoDetails.bildName, forKey: "thumbnail")
             newVideo.setValue(videoDetails.movieUrl, forKey: "videoUrl")
+            newVideo.setValue(counter, forKey: "videoID")
+            counter += 1
             
             if ( lastPaketId != videoDetails.produktID ) {
                 let newPaket = NSEntityDescription.insertNewObjectForEntityForName("Paket", inManagedObjectContext: context)
@@ -316,6 +337,16 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
             }
             
         }
+        // -----------------------------------------------------------------------------------------------------------------
+        // ------------------- datensatz initialisieren - ende -------------------------------------------------------------
+            }
+    
+        } catch {
+            print("Error fetching")
+        }
+        // ------------------- datensatz initialisieren - ende -------------------------------------------------------------
+        // -----------------------------------------------------------------------------------------------------------------
+        
         
 /*
         var request = NSFetchRequest(entityName: "Paket")
@@ -345,7 +376,30 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
         } catch {
             print("Error fetching")
         }
-*/
+
+        let requestVideo = NSFetchRequest(entityName: "Video")
+        requestVideo.returnsObjectsAsFaults = false
+        do {
+            let results = try context.executeFetchRequest(requestVideo)
+            if results.count > 0 {
+                for result in results as! [NSManagedObject] {
+                    print ("Name:")
+                    print(result.valueForKey("name")!)
+                    print ("Paket ID:")
+                    print(result.valueForKey("paketID")!)
+                    print ("Tumbnail:")
+                    print(result.valueForKey("thumbnail")!)
+                    print ("VideoUrl:")
+                    print(result.valueForKey("videoUrl")!)
+                    print ("VideoID:")
+                    print(result.valueForKey("videoID")!)
+                    print("------------------------------------------------")
+                }
+            }
+        } catch {
+            print("Error fetching")
+        }
+ */
     }
 
     // MARK: - Navigation
@@ -353,30 +407,77 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        let requestPaket = NSFetchRequest(entityName: "Paket")
+        let requestVideo = NSFetchRequest(entityName: "Video")
+        requestPaket.returnsObjectsAsFaults = false
+        requestVideo.returnsObjectsAsFaults = false
+        
         if segue.identifier == "showDetail" {
-          
+         
             let destCtrl = segue.destinationViewController as! VideoViewController
-            
             let indexPath = sender as! NSIndexPath
-
-            let sectionNow = indexPath.section
             
-            if (sectionNow == 0) {
-                destCtrl.fotoToPlay = fotos[indexPath.row]
-            }
-            if (sectionNow == 1) {
-                destCtrl.headSnacksToPlayPaid = headSnacks[indexPath.row]
-            }
-            if (sectionNow == 2) {
-                destCtrl.headDeepsToPlayPaid = headDeeps[indexPath.row]
-            }
-            if (sectionNow == 3) {
-                destCtrl.fotoToPlayPaid = paidVideos[indexPath.row]
-            }
+            var paketIdToUseNow = ""
             
-           
+            do {
+                let pakete = try context.executeFetchRequest(requestPaket)
+                for paket in pakete as! [NSManagedObject] {
+                    if ( paket.valueForKey("sectionID")! as? NSObject == indexPath.section ) {
+                        
+                        paketIdToUseNow = paket.valueForKey("paketID")! as! String
+                        
+                        let videos = try context.executeFetchRequest(requestVideo)
+                        
+                        // print("Paket ID: \(paketIdToUseNow)")
+                        // print("Index Row: \(indexPath.row)")
+                        
+                        for video in videos as! [NSManagedObject] {
+                            if ( video.valueForKey("paketID") as? NSObject == paketIdToUseNow && video.valueForKey("videoID") as? NSObject == indexPath.row ){
+                                destCtrl.videoURL = NSURL(string: video.valueForKey("videoUrl")! as! String)
+                                // print("destCtrl.videoURL: \(destCtrl.videoURL)")
+                            }
+                        }
+                    }
+                }
+            }
+            catch {
+                print("Error fetching")
+            }
         }
-    
+        if segue.identifier == "showPurchaseController" {
+            
+            let destCtrl = segue.destinationViewController as! PurchaseController
+            let indexPath = sender as! NSIndexPath
+            
+            var paketIdToUseNow = ""
+            
+            do {
+                let pakete = try context.executeFetchRequest(requestPaket)
+                for paket in pakete as! [NSManagedObject] {
+                    if ( paket.valueForKey("sectionID")! as? NSObject == indexPath.section ) {
+                        
+                        paketIdToUseNow = paket.valueForKey("paketID")! as! String
+                        
+                        let videos = try context.executeFetchRequest(requestVideo)
+                        
+                        // print("Paket ID: \(paketIdToUseNow)")
+                        // print("Index Row: \(indexPath.row)")
+                        
+                        for video in videos as! [NSManagedObject] {
+                            if ( video.valueForKey("paketID") as? NSObject == paketIdToUseNow && video.valueForKey("videoID") as? NSObject == indexPath.row ){
+                                destCtrl.paketName = String(UTF8String: video.valueForKey("name")! as! String)
+                                // print("destCtrl.videoURL: \(destCtrl.videoURL)")
+                            }
+                        }
+                    }
+                }
+            }
+            catch {
+                print("Error fetching")
+            }
+        }
     }
 
     // MARK: UICollectionViewDataSource
@@ -384,58 +485,28 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
      override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
     
         let sectionLabel: FotogridCell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: headerViewIdentifier, forIndexPath: indexPath) as! FotogridCell
-        
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDel.managedObjectContext
         let request = NSFetchRequest(entityName: "Section")
         request.returnsObjectsAsFaults = false
-        
         do {
             let results = try context.executeFetchRequest(request)
             if results.count > 0 {
-                
                 for result in results as! [NSManagedObject] {
-                    
                     if result.valueForKey("sectionID")! as? NSObject == indexPath.section {
-                    
                         sectionLabel.sectionLabelSuperHead.text = result.valueForKey("title")! as? String
-                    
                     }
                 }
-                
             }
         } catch {
             print("Error fetching")
         }
-        
         let bgColorNow = UIColor(red: 120.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 0.5)
         sectionLabel.backgroundColor = bgColorNow
-/*
-        if ( indexPath.section == 0 ){
-            sectionLabel.buttonBuy.hidden = true
-        }
-        if ( indexPath.section == 1 ){
-            sectionLabel.buttonBuy.hidden = true
-            
-        }
-        if ( indexPath.section == 2 ){
-            sectionLabel.buttonBuy.hidden = true
 
-        }
-        if ( indexPath.section == 3 ){
-            sectionLabel.buttonBuy.hidden = false
-            sectionLabel.userInteractionEnabled = true
-            sectionLabel.contentView.userInteractionEnabled = true
-            sectionLabel.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(FotogridController.didTapButton)))
-        }
- */
         return sectionLabel
     }
-/*
-    func didTapButton() {
-        self.performSegueWithIdentifier("showPurchase", sender: nil)
-    }
-*/
+
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -497,85 +568,77 @@ class FotogridController: UICollectionViewController, UICollectionViewDelegateFl
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        let requestPaket = NSFetchRequest(entityName: "Paket")
+        let requestVideo = NSFetchRequest(entityName: "Video")
+        requestPaket.returnsObjectsAsFaults = false
+        requestVideo.returnsObjectsAsFaults = false
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("fotoCell", forIndexPath: indexPath) as! FotogridCell
 
-        let sectionNow = indexPath.section
+        var paketIdToUseNow = ""
         
-        if (sectionNow == 0) {
-            let currentImg = UIImage(named: fotos[indexPath.row].bildName)
-            cell.imageView.image = currentImg
-            let currentTitle = fotos[indexPath.row].title
-            cell.imageLabel.text = currentTitle
+        do {
+            let pakete = try context.executeFetchRequest(requestPaket)
+            for paket in pakete as! [NSManagedObject] {
+                if ( paket.valueForKey("sectionID")! as? NSObject == indexPath.section ) {
+                    
+                    paketIdToUseNow = paket.valueForKey("paketID")! as! String
+                    
+                    let videos = try context.executeFetchRequest(requestVideo)
+                    
+                    // print("Paket ID: \(paketIdToUseNow)")
+                    // print("Index Row: \(indexPath.row)")
+                    
+                    for video in videos as! [NSManagedObject] {
+                        if ( video.valueForKey("paketID") as? NSObject == paketIdToUseNow && video.valueForKey("videoID") as? NSObject == indexPath.row ){
+                            cell.imageView.image = UIImage(named: video.valueForKey("thumbnail")! as! String)
+                            cell.imageLabel.text = (video.valueForKey("name")! as! String)
+                        }
+                    }
+                }
+            }
         }
-        if (sectionNow == 1) {
-            let currentImg = UIImage(named: headSnacks[indexPath.row].bildName)
-            cell.imageView.image = currentImg
-            let currentTitle = headSnacks[indexPath.row].title
-            cell.imageLabel.text = currentTitle
-        }
-        if (sectionNow == 2) {
-            let currentImg = UIImage(named: headDeeps[indexPath.row].bildName)
-            cell.imageView.image = currentImg
-            let currentTitle = headDeeps[indexPath.row].title
-            cell.imageLabel.text = currentTitle
-        }
-        if (sectionNow == 3) {
-            let currentImg = UIImage(named: paidVideos[indexPath.row].bildName)
-            cell.imageView.image = currentImg
-            let currentTitle = paidVideos[indexPath.row].title
-            cell.imageLabel.text = currentTitle
+        catch {
+            print("Error fetching")
         }
 
         return cell
     }
     
     // MARK: FlowLayout Delegate
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexpath: NSIndexPath) -> CGSize {
-        
         var size = CGSize(width: 140, height: 80)
-
         if ( self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular ) {
             size = CGSize(width: 280, height: 160)
         }
-        
         return size
-    
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-    
         return UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
-    
     }
     
     // MARK: UICollectionViewDelegate
 
-    // Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-       
-        // print(indexPath.section)
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("fotoCell", forIndexPath: indexPath) as! FotogridCell
-        
+      
         let sectionNow = indexPath.section
-        
         var videoIsPaid = false
         
         if (sectionNow == 0) {
-            let currentTitle = fotos[indexPath.row].title
-            cell.imageLabel.text = currentTitle
             videoIsPaid = true
         }
         if (sectionNow == 1) {
-            let currentTitle = headSnacks[indexPath.row].title
-            cell.imageLabel.text = currentTitle
+            videoIsPaid = false
         }
         if (sectionNow == 2) {
-            let currentTitle = headDeeps[indexPath.row].title
-            cell.imageLabel.text = currentTitle
+            videoIsPaid = false
         }
         if (sectionNow == 3) {
-            let currentTitle = paidVideos[indexPath.row].title
-            cell.imageLabel.text = currentTitle
+            videoIsPaid = true
         }
         
         if ( videoIsPaid ){
