@@ -42,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D00F5CBE1CDB3EC200622851 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		D00F5CBF1CDB535C00622851 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D026B7561CCF7B9000DCD187 /* headnap-logo-white-b250.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headnap-logo-white-b250.png"; sourceTree = "<group>"; };
 		D079449D1CCA69200037DEC4 /* PurchaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseController.swift; sourceTree = "<group>"; };
@@ -98,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				D00F5CBF1CDB535C00622851 /* StoreKit.framework */,
-				D00F5CBE1CDB3EC200622851 /* MyPlayground.playground */,
 				D0EC0E0D1CB398740045956E /* HeadNapApp */,
 				D0EC0E251CB398740045956E /* HeadNapAppTests */,
 				D0EC0E301CB398740045956E /* HeadNapAppUITests */,

@@ -28,11 +28,23 @@ class VideoViewController: UIViewController {
     }
 
     func loadVideo() {
+        
+        let player = AVPlayer(URL: videoURL!)
+        let playerController = AVPlayerViewController()
+        
+        playerController.player = player
+        self.addChildViewController(playerController)
+        self.view.addSubview(playerController.view)
+        playerController.view.frame = self.view.frame
+        player.play()
+        
+/*
         moviePlayer = AVPlayer(URL: videoURL!)
         let playerViewController = AVPlayerViewController()
         playerViewController.player = moviePlayer
         self.presentViewController(playerViewController, animated: false){
             self.moviePlayer!.play()
         }
+ */
     }
 }
