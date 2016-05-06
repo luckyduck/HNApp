@@ -12,6 +12,7 @@ struct MyPhoto {
     var kommentar: String
     var movieUrl: String
     var produktID: String
+    var paketName: String
 }
 struct MyPaidVideos {
     var bildName: String
@@ -19,6 +20,7 @@ struct MyPaidVideos {
     var kommentar: String
     var movieUrl: String
     var produktID: String
+    var paketName: String
 }
 struct MyHeadSnacks {
     var bildName: String
@@ -26,6 +28,7 @@ struct MyHeadSnacks {
     var kommentar: String
     var movieUrl: String
     var produktID: String
+    var paketName: String
 }
 struct MyHeadDeep {
     var bildName: String
@@ -33,6 +36,7 @@ struct MyHeadDeep {
     var kommentar: String
     var movieUrl: String
     var produktID: String
+    var paketName: String
 }
 struct MySectionTitleLabels {
     var titleLabel: String

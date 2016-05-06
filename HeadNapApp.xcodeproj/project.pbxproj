@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00F5CC01CDB535C00622851 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00F5CBF1CDB535C00622851 /* StoreKit.framework */; };
 		D026B7571CCF7B9000DCD187 /* headnap-logo-white-b250.png in Resources */ = {isa = PBXBuildFile; fileRef = D026B7561CCF7B9000DCD187 /* headnap-logo-white-b250.png */; };
 		D079449E1CCA69200037DEC4 /* PurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079449D1CCA69200037DEC4 /* PurchaseController.swift */; };
 		D0EC0E0F1CB398740045956E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E0E1CB398740045956E /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		D00F5CBE1CDB3EC200622851 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		D00F5CBF1CDB535C00622851 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D026B7561CCF7B9000DCD187 /* headnap-logo-white-b250.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headnap-logo-white-b250.png"; sourceTree = "<group>"; };
 		D079449D1CCA69200037DEC4 /* PurchaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseController.swift; sourceTree = "<group>"; };
 		D0DBC3B61CB7934E00DB2101 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00F5CC01CDB535C00622851 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,7 @@
 		D0EC0E021CB398740045956E = {
 			isa = PBXGroup;
 			children = (
+				D00F5CBF1CDB535C00622851 /* StoreKit.framework */,
 				D00F5CBE1CDB3EC200622851 /* MyPlayground.playground */,
 				D0EC0E0D1CB398740045956E /* HeadNapApp */,
 				D0EC0E251CB398740045956E /* HeadNapAppTests */,
@@ -237,7 +241,7 @@
 						DevelopmentTeam = DGAZGKJN2Y;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -465,7 +469,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeadNapApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.headnap.headnapappvideos-";
+				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.headnapappvideos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -479,7 +483,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeadNapApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.headnap.headnapappvideos-";
+				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.headnapappvideos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
