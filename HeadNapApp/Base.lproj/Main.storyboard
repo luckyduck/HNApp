@@ -105,85 +105,142 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vZ0-Il-fui">
-                                <rect key="frame" x="20" y="89" width="560" height="99"/>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaY-CV-vrv">
+                                <rect key="frame" x="20" y="72" width="560" height="220"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titel des Pakets" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbj-sZ-hb8">
-                                        <rect key="frame" x="173" y="0.0" width="214" height="35"/>
-                                        <color key="tintColor" red="0.84287840127944946" green="0.80049234628677368" blue="0.063411764800548553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
-                                        <color key="textColor" red="0.93564850091934204" green="0.89521723985671997" blue="0.71810895204544067" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schalten Sie … frei, für einmalig nur … €" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAG-DG-Pve">
-                                        <rect key="frame" x="152" y="35" width="256" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info: Die im Paket enthaltenen Videos können Sie unbegrenzt oft anschauen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwa-4M-KB2">
-                                        <rect key="frame" x="34" y="52" width="493" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="8" y="183" width="544" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titel des Pakets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbj-sZ-hb8">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
+                                        <color key="backgroundColor" red="0.1460746825" green="0.39569368960000001" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.84287840127944946" green="0.80049234628677368" blue="0.063411764800548553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rYm-kg-0en"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAG-DG-Pve">
+                                        <rect key="frame" x="8" y="58" width="544" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Xif-P1-wHw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJP-O5-hAH">
-                                        <rect key="frame" x="194" y="69" width="173" height="30"/>
+                                        <rect key="frame" x="8" y="118" width="544" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.69108590780000001" blue="0.349568779" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="XH3-TN-AJf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <state key="normal" title="Dieses Paket freischalten">
-                                            <color key="titleColor" red="0.61197096109390259" green="0.59341984987258911" blue="0.085392870008945465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.69108590780000001" blue="0.349568779" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="0.2149830287" blue="0.2896703001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Fbj-sZ-hb8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vZ0-Il-fui" secondAttribute="top" constant="15" id="pq3-jJ-agj"/>
-                                    <constraint firstItem="Nwa-4M-KB2" firstAttribute="top" secondItem="nAG-DG-Pve" secondAttribute="bottom" id="r9z-gw-QPL"/>
-                                    <constraint firstItem="nAG-DG-Pve" firstAttribute="top" secondItem="Fbj-sZ-hb8" secondAttribute="bottom" id="vqr-vU-K2d"/>
+                                    <constraint firstItem="nAG-DG-Pve" firstAttribute="leading" secondItem="UaY-CV-vrv" secondAttribute="leading" constant="8" id="0lq-R1-3W9"/>
+                                    <constraint firstAttribute="trailing" secondItem="GJP-O5-hAH" secondAttribute="trailing" constant="8" id="1eU-dq-v4p"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fbj-sZ-hb8" secondAttribute="trailing" id="GIx-bq-Ff2"/>
+                                    <constraint firstAttribute="trailing" secondItem="nAG-DG-Pve" secondAttribute="trailing" constant="8" id="LQm-ic-S59"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nwa-4M-KB2" secondAttribute="trailing" constant="8" id="P6e-8f-vLB"/>
+                                    <constraint firstItem="Nwa-4M-KB2" firstAttribute="leading" secondItem="UaY-CV-vrv" secondAttribute="leading" constant="8" id="QvR-nV-Tw3"/>
+                                    <constraint firstItem="Nwa-4M-KB2" firstAttribute="top" secondItem="GJP-O5-hAH" secondAttribute="bottom" constant="15" id="UKy-2V-1Dm"/>
+                                    <constraint firstItem="Fbj-sZ-hb8" firstAttribute="leading" secondItem="UaY-CV-vrv" secondAttribute="leading" id="b7h-gu-E5B"/>
+                                    <constraint firstItem="GJP-O5-hAH" firstAttribute="top" secondItem="nAG-DG-Pve" secondAttribute="bottom" constant="30" id="eiy-lb-dV2"/>
+                                    <constraint firstAttribute="height" constant="220" id="ej9-sy-TSn"/>
+                                    <constraint firstItem="GJP-O5-hAH" firstAttribute="leading" secondItem="UaY-CV-vrv" secondAttribute="leading" constant="8" id="jeI-Ri-d6p"/>
+                                    <constraint firstItem="Fbj-sZ-hb8" firstAttribute="top" secondItem="UaY-CV-vrv" secondAttribute="top" id="sgN-6k-vyL"/>
+                                    <constraint firstItem="nAG-DG-Pve" firstAttribute="top" secondItem="Fbj-sZ-hb8" secondAttribute="bottom" constant="8" id="uJa-ZM-Yqd"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="pq3-jJ-agj"/>
-                                    </mask>
-                                </variation>
-                            </stackView>
-                            <stackView opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1P6-uk-UQO">
-                                <rect key="frame" x="20" y="213" width="560" height="99"/>
+                            </view>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bR6-iO-W58">
+                                <rect key="frame" x="20" y="322" width="560" height="220"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alles freischalten" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSb-RQ-AXe">
-                                        <rect key="frame" x="171" y="0.0" width="218" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alles freischalten" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSb-RQ-AXe">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
+                                        <color key="backgroundColor" red="0.1460746825" green="0.39569368960000001" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="Bcx-O6-Poa"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="l1D-RZ-YnM"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="yYr-tO-Taz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schalten Sie alle Videos frei, für nur 4.99 € pro Monat." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQA-aj-z2j">
-                                        <rect key="frame" x="105" y="35" width="350" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info: Damit können Sie alle Videos unbegrenzt oft anschauen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIk-EC-tP1">
-                                        <rect key="frame" x="82" y="52" width="396" height="17"/>
-                                        <color key="tintColor" red="1" green="0.69108590780000001" blue="0.349568779" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Bcx-O6-Poa"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4u-z4-XIR">
-                                        <rect key="frame" x="200" y="69" width="161" height="30"/>
-                                        <state key="normal" title="Alle Videos freischalten"/>
+                                        <rect key="frame" x="8" y="119" width="544" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.69108590780000001" blue="0.349568779" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="nig-iV-HKl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <state key="normal" title="Alle Videos freischalten">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info: Damit können Sie alle Videos unbegrenzt oft anschauen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIk-EC-tP1">
+                                        <rect key="frame" x="8" y="184" width="544" height="15"/>
+                                        <color key="tintColor" red="1" green="0.69108590780000001" blue="0.349568779" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alle Videos: Nur 4.99 € pro Monat." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQA-aj-z2j">
+                                        <rect key="frame" x="8" y="65" width="544" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84287840127944946" green="0.80049234628677368" blue="0.063411764800548553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="vQA-aj-z2j" firstAttribute="top" secondItem="sSb-RQ-AXe" secondAttribute="bottom" constant="15" id="DHc-zc-j4E"/>
+                                    <constraint firstItem="cIk-EC-tP1" firstAttribute="leading" secondItem="bR6-iO-W58" secondAttribute="leading" constant="8" id="NQO-4N-DsI"/>
+                                    <constraint firstAttribute="height" constant="220" id="Ouj-w1-LbH"/>
+                                    <constraint firstItem="sSb-RQ-AXe" firstAttribute="top" secondItem="bR6-iO-W58" secondAttribute="top" id="YFh-Jb-T3a"/>
+                                    <constraint firstAttribute="trailing" secondItem="t4u-z4-XIR" secondAttribute="trailing" constant="8" id="aMd-h1-oct"/>
+                                    <constraint firstAttribute="trailing" secondItem="vQA-aj-z2j" secondAttribute="trailing" constant="8" id="gHY-XC-SIa"/>
+                                    <constraint firstItem="sSb-RQ-AXe" firstAttribute="leading" secondItem="bR6-iO-W58" secondAttribute="leading" id="iuJ-fD-fnu"/>
+                                    <constraint firstItem="t4u-z4-XIR" firstAttribute="leading" secondItem="bR6-iO-W58" secondAttribute="leading" constant="8" id="kAO-ia-nxe"/>
+                                    <constraint firstAttribute="trailing" secondItem="cIk-EC-tP1" secondAttribute="trailing" constant="8" id="ndd-cP-1oE"/>
+                                    <constraint firstAttribute="trailing" secondItem="sSb-RQ-AXe" secondAttribute="trailing" id="nuK-Ko-7rv"/>
+                                    <constraint firstItem="cIk-EC-tP1" firstAttribute="top" secondItem="t4u-z4-XIR" secondAttribute="bottom" constant="15" id="rVu-BT-0QL"/>
+                                    <constraint firstItem="t4u-z4-XIR" firstAttribute="top" secondItem="vQA-aj-z2j" secondAttribute="bottom" constant="30" id="vzH-co-iS9"/>
+                                    <constraint firstItem="vQA-aj-z2j" firstAttribute="leading" secondItem="bR6-iO-W58" secondAttribute="leading" constant="8" id="zYw-TR-v3U"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.50531218079999995" green="0.79332211549999998" blue="0.97004550700000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="vZ0-Il-fui" firstAttribute="leading" secondItem="5oy-cB-aoO" secondAttribute="leadingMargin" id="BcR-ic-JDO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vZ0-Il-fui" secondAttribute="trailing" id="RUl-Oc-O5m"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1P6-uk-UQO" secondAttribute="trailing" id="dfa-u7-GE9"/>
-                            <constraint firstItem="vZ0-Il-fui" firstAttribute="top" secondItem="SZp-sH-xLV" secondAttribute="bottom" constant="25" id="oPB-YH-QdS"/>
-                            <constraint firstItem="1P6-uk-UQO" firstAttribute="top" secondItem="vZ0-Il-fui" secondAttribute="bottom" constant="25" id="qpT-80-hGT"/>
-                            <constraint firstItem="1P6-uk-UQO" firstAttribute="leading" secondItem="5oy-cB-aoO" secondAttribute="leadingMargin" id="rl7-q4-hmT"/>
+                            <constraint firstItem="bR6-iO-W58" firstAttribute="leading" secondItem="5oy-cB-aoO" secondAttribute="leadingMargin" id="2z6-Oa-k77"/>
+                            <constraint firstItem="bR6-iO-W58" firstAttribute="leading" secondItem="UaY-CV-vrv" secondAttribute="leading" id="Bhb-3f-UoL"/>
+                            <constraint firstItem="UaY-CV-vrv" firstAttribute="top" secondItem="SZp-sH-xLV" secondAttribute="bottom" constant="8" symbolic="YES" id="Cd5-ZF-80R"/>
+                            <constraint firstItem="bR6-iO-W58" firstAttribute="trailing" secondItem="UaY-CV-vrv" secondAttribute="trailing" id="L1k-z0-x9i"/>
+                            <constraint firstItem="bR6-iO-W58" firstAttribute="trailing" secondItem="5oy-cB-aoO" secondAttribute="trailingMargin" id="b8C-zx-Rw6"/>
+                            <constraint firstItem="bR6-iO-W58" firstAttribute="top" secondItem="UaY-CV-vrv" secondAttribute="bottom" constant="30" id="clx-E7-IO1"/>
+                            <constraint firstItem="bR6-iO-W58" firstAttribute="top" secondItem="5oy-cB-aoO" secondAttribute="top" constant="313" id="mbP-u5-1Zj"/>
+                            <constraint firstItem="bR6-iO-W58" firstAttribute="top" secondItem="UaY-CV-vrv" secondAttribute="bottom" constant="18" id="ogD-MI-INN"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mbP-u5-1Zj"/>
+                                <exclude reference="ogD-MI-INN"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Videos freischalten" id="Kug-dI-fxs">
                         <barButtonItem key="rightBarButtonItem" title="Info" id="fEm-Ga-uD1"/>

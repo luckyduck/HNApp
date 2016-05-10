@@ -29,7 +29,7 @@ class PurchaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelVideoPaket.text = "Paket: \(paketName!)"
+        labelVideoPaket.text = "\(paketName!)"
         
         fetchProductInfomation()
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
