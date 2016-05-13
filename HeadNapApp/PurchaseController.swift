@@ -26,8 +26,10 @@ class PurchaseController: UIViewController {
     @IBOutlet weak var buyHeadNapPaket: UIButton!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         labelVideoPaket.text = "\(paketName!)"
         
@@ -89,6 +91,7 @@ extension PurchaseController: SKPaymentTransactionObserver {
             case SKPaymentTransactionState.Failed:
                 print("nicht erfolgreich")
                 SKPaymentQueue.defaultQueue().finishTransaction(currentTransaction)
+                SKPaymentQueue.defaultQueue().removeTransactionObserver(self)
                 transactionForProductId = nil
                 
             default:
