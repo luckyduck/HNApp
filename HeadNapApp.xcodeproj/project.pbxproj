@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D00F5CC01CDB535C00622851 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00F5CBF1CDB535C00622851 /* StoreKit.framework */; };
-		D026B7571CCF7B9000DCD187 /* headnap-logo-white-b250.png in Resources */ = {isa = PBXBuildFile; fileRef = D026B7561CCF7B9000DCD187 /* headnap-logo-white-b250.png */; };
-		D079449E1CCA69200037DEC4 /* PurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079449D1CCA69200037DEC4 /* PurchaseController.swift */; };
 		D0EC0E0F1CB398740045956E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E0E1CB398740045956E /* AppDelegate.swift */; };
 		D0EC0E141CB398740045956E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EC0E121CB398740045956E /* Main.storyboard */; };
 		D0EC0E171CB398740045956E /* HeadNapApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0E151CB398740045956E /* HeadNapApp.xcdatamodeld */; };
@@ -42,9 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D00F5CBF1CDB535C00622851 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		D026B7561CCF7B9000DCD187 /* headnap-logo-white-b250.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headnap-logo-white-b250.png"; sourceTree = "<group>"; };
-		D079449D1CCA69200037DEC4 /* PurchaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseController.swift; sourceTree = "<group>"; };
 		D0DBC3B61CB7934E00DB2101 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D0DBC3B71CB7934E00DB2101 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		D0EC0E0B1CB398740045956E /* HeadNapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadNapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00F5CC01CDB535C00622851 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +89,6 @@
 		D0EC0E021CB398740045956E = {
 			isa = PBXGroup;
 			children = (
-				D00F5CBF1CDB535C00622851 /* StoreKit.framework */,
 				D0EC0E0D1CB398740045956E /* HeadNapApp */,
 				D0EC0E251CB398740045956E /* HeadNapAppTests */,
 				D0EC0E301CB398740045956E /* HeadNapAppUITests */,
@@ -126,7 +118,6 @@
 				D0EC0E471CB3C1380045956E /* FotogridCell.swift */,
 				D0EC0E491CB3C32B0045956E /* File.swift */,
 				D0EC0E4B1CB3D75F0045956E /* VideoViewController.swift */,
-				D079449D1CCA69200037DEC4 /* PurchaseController.swift */,
 			);
 			path = HeadNapApp;
 			sourceTree = "<group>";
@@ -152,7 +143,6 @@
 		D0EC0E411CB3A0170045956E /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D026B7561CCF7B9000DCD187 /* headnap-logo-white-b250.png */,
 				D0EC0E3F1CB3A00D0045956E /* siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png */,
 			);
 			name = images;
@@ -236,12 +226,7 @@
 				TargetAttributes = {
 					D0EC0E0A1CB398740045956E = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = DGAZGKJN2Y;
-						SystemCapabilities = {
-							com.apple.InAppPurchase = {
-								enabled = 1;
-							};
-						};
+						DevelopmentTeam = VQ28DV6T68;
 					};
 					D0EC0E211CB398740045956E = {
 						CreatedOnToolsVersion = 7.3;
@@ -283,7 +268,6 @@
 				D0EC0E401CB3A00D0045956E /* siegfried-hoechst-portrait-hemd_b960-h540_bio_persoenlich.png in Resources */,
 				D0EC0E1C1CB398740045956E /* LaunchScreen.storyboard in Resources */,
 				D0EC0E191CB398740045956E /* Assets.xcassets in Resources */,
-				D026B7571CCF7B9000DCD187 /* headnap-logo-white-b250.png in Resources */,
 				D0EC0E141CB398740045956E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +294,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EC0E4A1CB3C32B0045956E /* File.swift in Sources */,
-				D079449E1CCA69200037DEC4 /* PurchaseController.swift in Sources */,
 				D0EC0E461CB3BFAA0045956E /* FotogridController.swift in Sources */,
 				D0EC0E4C1CB3D75F0045956E /* VideoViewController.swift in Sources */,
 				D0EC0E0F1CB398740045956E /* AppDelegate.swift in Sources */,
@@ -390,8 +373,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HeadNap GmbH (DGAZGKJN2Y)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HeadNap GmbH (DGAZGKJN2Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -410,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -437,8 +419,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HeadNap GmbH (DGAZGKJN2Y)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HeadNap GmbH (DGAZGKJN2Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -451,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,14 +444,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeadNapApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.headnapappvideos;
+				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.HeadNapApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -478,14 +455,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeadNapApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.headnapappvideos;
+				PRODUCT_BUNDLE_IDENTIFIER = de.headnap.HeadNapApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
